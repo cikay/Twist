@@ -1,0 +1,6 @@
+E:\Yazılım projeleri\Twist\Twist.Entity\bin\Debug\Twist.Entity.dll
+E:\Yazılım projeleri\Twist\Twist.Entity\bin\Debug\Twist.Entity.pdb
+E:\Yazılım projeleri\Twist\Twist.Entity\obj\Debug\Twist.Entity.csprojAssemblyReference.cache
+E:\Yazılım projeleri\Twist\Twist.Entity\obj\Debug\Twist.Entity.csproj.CoreCompileInputs.cache
+E:\Yazılım projeleri\Twist\Twist.Entity\obj\Debug\Twist.Entity.dll
+E:\Yazılım projeleri\Twist\Twist.Entity\obj\Debug\Twist.Entity.pdb

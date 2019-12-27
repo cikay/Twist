@@ -1,0 +1,10 @@
+E:\Yazılım projeleri\Twist\Twist.ORM\bin\Debug\Twist.ORM.dll
+E:\Yazılım projeleri\Twist\Twist.ORM\bin\Debug\Twist.ORM.pdb
+E:\Yazılım projeleri\Twist\Twist.ORM\bin\Debug\EasyModbus.dll
+E:\Yazılım projeleri\Twist\Twist.ORM\bin\Debug\Twist.Entity.dll
+E:\Yazılım projeleri\Twist\Twist.ORM\bin\Debug\Twist.Entity.pdb
+E:\Yazılım projeleri\Twist\Twist.ORM\obj\Debug\Twist.ORM.csprojAssemblyReference.cache
+E:\Yazılım projeleri\Twist\Twist.ORM\obj\Debug\Twist.ORM.csproj.CoreCompileInputs.cache
+E:\Yazılım projeleri\Twist\Twist.ORM\obj\Debug\Twist.ORM.csproj.CopyComplete
+E:\Yazılım projeleri\Twist\Twist.ORM\obj\Debug\Twist.ORM.dll
+E:\Yazılım projeleri\Twist\Twist.ORM\obj\Debug\Twist.ORM.pdb
