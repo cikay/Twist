@@ -49,6 +49,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DesignUI.cs" />
+    <Compile Include="Classes\ListData.cs" />
+    <Compile Include="Forms\AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddUserForm.designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddCableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCableForm.designer.cs">
+      <DependentUpon>AddCableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddProductForm.designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListUsersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListUsersForm.designer.cs">
+      <DependentUpon>ListUsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListCablesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListCablesForm.designer.cs">
+      <DependentUpon>ListCablesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListProductsForm.designer.cs">
+      <DependentUpon>ListProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProductDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProductDetailsForm.designer.cs">
+      <DependentUpon>ProductDetailsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TwistMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +107,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\English\TwistCablesForm.English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TwistCablesForm.English.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\English\TwistMainForm.English.Designer.cs">
       <DependentUpon>TwistMainForm.English.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -78,8 +127,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TwistUsersForm.English.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Turkish\TwistCablesForm.Turkish.Designer.cs">
+      <DependentUpon>TwistCablesForm.Turkish.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Resources\Turkish\TwistMainForm.Turkish.Designer.cs">
       <DependentUpon>TwistMainForm.Turkish.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Turkish\TwistProductsForm.Turkish.Designer.cs">
+      <DependentUpon>TwistProductsForm.Turkish.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -88,6 +147,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TwistUsersForm.Turkish.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddCableForm.resx">
+      <DependentUpon>AddCableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListUsersForm.resx">
+      <DependentUpon>ListUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListCablesForm.resx">
+      <DependentUpon>ListCablesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListProductsForm.resx">
+      <DependentUpon>ListProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProductDetailsForm.resx">
+      <DependentUpon>ProductDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\TwistMainForm.resx">
       <DependentUpon>TwistMainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +183,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Resources\English\TwistCablesForm.English.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TwistCablesForm.English.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\English\TwistMainForm.English.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>TwistMainForm.English.Designer.cs</LastGenOutput>
@@ -115,9 +199,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>TwistUsersForm.English.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Turkish\TwistCablesForm.Turkish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TwistCablesForm.Turkish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Turkish\TwistMainForm.Turkish.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>TwistMainForm.Turkish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Turkish\TwistProductsForm.Turkish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TwistProductsForm.Turkish.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Turkish\TwistUsersForm.Turkish.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,9 +229,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Twist.Entity\Twist.Entity.csproj">
       <Project>{ada5b543-57cd-40da-a2f2-d07c3c11783c}</Project>

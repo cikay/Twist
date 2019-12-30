@@ -90,9 +90,9 @@ namespace Twist.WinFormUI.Resources.English {
         /// <summary>
         ///   Looks up a localized string similar to Protection Info.
         /// </summary>
-        internal static string ProtectInfo {
+        internal static string ProtectionInfo {
             get {
-                return ResourceManager.GetString("ProtectInfo", resourceCulture);
+                return ResourceManager.GetString("ProtectionInfo", resourceCulture);
             }
         }
         

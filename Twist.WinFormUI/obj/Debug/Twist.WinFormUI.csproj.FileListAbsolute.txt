@@ -21,3 +21,13 @@ E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources.English.TwistProductsForm.English.resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources.English.TwistUsersForm.English.resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources.Turkish.TwistUsersForm.Turkish.resources
+E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources.English.TwistCablesForm.English.resources
+E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources.Turkish.TwistCablesForm.Turkish.resources
+E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources.Turkish.TwistProductsForm.Turkish.resources
+E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.Forms.AddAccountForm.resources
+E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.Forms.AddCableForm.resources
+E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.Forms.AddProductForm.resources
+E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.Forms.ListUsersForm.resources
+E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.Forms.ListCablesForm.resources
+E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.Forms.ListProductsForm.resources
+E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.ProductDetailsForm.resources

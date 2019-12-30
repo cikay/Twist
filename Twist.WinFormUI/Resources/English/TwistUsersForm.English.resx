@@ -126,7 +126,7 @@
   <data name="Pin" xml:space="preserve">
     <value>Pin</value>
   </data>
-  <data name="ProtectInfo" xml:space="preserve">
+  <data name="ProtectionInfo" xml:space="preserve">
     <value>Protection Info</value>
   </data>
   <data name="UserName" xml:space="preserve">

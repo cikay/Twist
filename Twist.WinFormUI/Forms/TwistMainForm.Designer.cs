@@ -40,6 +40,7 @@
             this.pictureB_FullScreenBtn = new System.Windows.Forms.PictureBox();
             this.pictureB_XBtn = new System.Windows.Forms.PictureBox();
             this.Panel_LeftMenu = new System.Windows.Forms.Panel();
+            this.pictureBox_EksonLogo = new System.Windows.Forms.PictureBox();
             this.btn_Users = new System.Windows.Forms.Button();
             this.btn_Cables = new System.Windows.Forms.Button();
             this.btn_Products = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureB_FullScreenBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureB_XBtn)).BeginInit();
             this.Panel_LeftMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_EksonLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_TopMenu
@@ -73,9 +75,9 @@
             this.combo_Languages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.combo_Languages.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.combo_Languages.FormattingEnabled = true;
-            this.combo_Languages.Location = new System.Drawing.Point(696, 30);
+            this.combo_Languages.Location = new System.Drawing.Point(665, 30);
             this.combo_Languages.Name = "combo_Languages";
-            this.combo_Languages.Size = new System.Drawing.Size(100, 23);
+            this.combo_Languages.Size = new System.Drawing.Size(131, 23);
             this.combo_Languages.TabIndex = 5;
             this.combo_Languages.SelectedIndexChanged += new System.EventHandler(this.combo_Languages_SelectedIndexChanged);
             // 
@@ -182,6 +184,7 @@
             // Panel_LeftMenu
             // 
             this.Panel_LeftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.Panel_LeftMenu.Controls.Add(this.pictureBox_EksonLogo);
             this.Panel_LeftMenu.Controls.Add(this.btn_Users);
             this.Panel_LeftMenu.Controls.Add(this.btn_Cables);
             this.Panel_LeftMenu.Controls.Add(this.btn_Products);
@@ -190,6 +193,18 @@
             this.Panel_LeftMenu.Name = "Panel_LeftMenu";
             this.Panel_LeftMenu.Size = new System.Drawing.Size(133, 468);
             this.Panel_LeftMenu.TabIndex = 1;
+            // 
+            // pictureBox_EksonLogo
+            // 
+            this.pictureBox_EksonLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_EksonLogo.Image")));
+            this.pictureBox_EksonLogo.Location = new System.Drawing.Point(3, 425);
+            this.pictureBox_EksonLogo.Name = "pictureBox_EksonLogo";
+            this.pictureBox_EksonLogo.Size = new System.Drawing.Size(130, 31);
+            this.pictureBox_EksonLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_EksonLogo.TabIndex = 1;
+            this.pictureBox_EksonLogo.TabStop = false;
+            this.pictureBox_EksonLogo.Click += new System.EventHandler(this.pictureBox_EksonLogo_Click);
+            this.pictureBox_EksonLogo.MouseHover += new System.EventHandler(this.pictureBox_EksonLogo_MouseHover);
             // 
             // btn_Users
             // 
@@ -243,6 +258,7 @@
             this.Controls.Add(this.Panel_TopMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
+            this.MinimizeBox = false;
             this.Name = "TwistMainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TwistMainForm_Load);
@@ -252,6 +268,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureB_FullScreenBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureB_XBtn)).EndInit();
             this.Panel_LeftMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_EksonLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -272,5 +289,6 @@
         private System.Windows.Forms.Button btn_Cables;
         private System.Windows.Forms.Button btn_Products;
         private System.Windows.Forms.ComboBox combo_Languages;
+        private System.Windows.Forms.PictureBox pictureBox_EksonLogo;
     }
 }

@@ -59,5 +59,212 @@ namespace Twist.WinFormUI.Resources.English {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Back Acceleration.
+        /// </summary>
+        internal static string BackAcceleration {
+            get {
+                return ResourceManager.GetString("BackAcceleration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Back Circuit.
+        /// </summary>
+        internal static string BackCircuit {
+            get {
+                return ResourceManager.GetString("BackCircuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Back Deceleration.
+        /// </summary>
+        internal static string BackDeceleration {
+            get {
+                return ResourceManager.GetString("BackDeceleration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Back Speed.
+        /// </summary>
+        internal static string BackSpeed {
+            get {
+                return ResourceManager.GetString("BackSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Burulma Sonrasi Boy 1.
+        /// </summary>
+        internal static string BurulmaSonrasiBoy1 {
+            get {
+                return ResourceManager.GetString("BurulmaSonrasiBoy1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Burulma Sonrasi Boy 2.
+        /// </summary>
+        internal static string BurulmaSonrasiBoy2 {
+            get {
+                return ResourceManager.GetString("BurulmaSonrasiBoy2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cable 1 Color.
+        /// </summary>
+        internal static string Cable1Color {
+            get {
+                return ResourceManager.GetString("Cable1Color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cable 2 Color.
+        /// </summary>
+        internal static string Cable2Color {
+            get {
+                return ResourceManager.GetString("Cable2Color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cable Diameter.
+        /// </summary>
+        internal static string CableDiameter {
+            get {
+                return ResourceManager.GetString("CableDiameter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cable Direction.
+        /// </summary>
+        internal static string CableDirection {
+            get {
+                return ResourceManager.GetString("CableDirection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cable Release Duration.
+        /// </summary>
+        internal static string CableReleaseDuration {
+            get {
+                return ResourceManager.GetString("CableReleaseDuration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cable Section.
+        /// </summary>
+        internal static string CableSection {
+            get {
+                return ResourceManager.GetString("CableSection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Foward Acceleration.
+        /// </summary>
+        internal static string FowardAcceleration {
+            get {
+                return ResourceManager.GetString("FowardAcceleration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Foward Circuit.
+        /// </summary>
+        internal static string FowardCircuit {
+            get {
+                return ResourceManager.GetString("FowardCircuit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Foward Deceleration.
+        /// </summary>
+        internal static string FowardDeceleration {
+            get {
+                return ResourceManager.GetString("FowardDeceleration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Foward Speed.
+        /// </summary>
+        internal static string FowardSpeed {
+            get {
+                return ResourceManager.GetString("FowardSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Label Name.
+        /// </summary>
+        internal static string LabelName {
+            get {
+                return ResourceManager.GetString("LabelName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pitch Dimesion.
+        /// </summary>
+        internal static string PitchDimesion {
+            get {
+                return ResourceManager.GetString("PitchDimesion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Product Name.
+        /// </summary>
+        internal static string ProductName {
+            get {
+                return ResourceManager.GetString("ProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quantity.
+        /// </summary>
+        internal static string Quantity {
+            get {
+                return ResourceManager.GetString("Quantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sağ Acik Boy.
+        /// </summary>
+        internal static string SağAcikBoy {
+            get {
+                return ResourceManager.GetString("SağAcikBoy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sol Açik Boy.
+        /// </summary>
+        internal static string SolAçikBoy {
+            get {
+                return ResourceManager.GetString("SolAçikBoy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tour Interregnum Waiting.
+        /// </summary>
+        internal static string TourInterregnumWaiting {
+            get {
+                return ResourceManager.GetString("TourInterregnumWaiting", resourceCulture);
+            }
+        }
     }
 }
