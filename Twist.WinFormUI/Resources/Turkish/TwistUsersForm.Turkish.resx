@@ -120,6 +120,12 @@
   <data name="BarcodPin" xml:space="preserve">
     <value>Barkod Pin</value>
   </data>
+  <data name="btn_Add" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="btn_Update" xml:space="preserve">
+    <value>Güncelle</value>
+  </data>
   <data name="Level" xml:space="preserve">
     <value>Yetki</value>
   </data>

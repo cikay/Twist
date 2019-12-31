@@ -28,6 +28,7 @@ namespace WindowsFormsApp1.Forms
             lV_Cables.Items.Clear();
             lV_Cables.Refresh();
             ListCables();
+            
         }
 
         private void ListCables()

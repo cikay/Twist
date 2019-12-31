@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.lV_Cables = new System.Windows.Forms.ListView();
-            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Section = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CableName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CableSection = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OuterDiameter = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Direction = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Color = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_Update = new System.Windows.Forms.Button();
-            this.btn_AddCable = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lV_Cables
             // 
             this.lV_Cables.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Name,
-            this.Section,
+            this.CableName,
+            this.CableSection,
             this.OuterDiameter,
             this.Direction,
             this.Color});
@@ -54,17 +54,17 @@
             this.lV_Cables.UseCompatibleStateImageBehavior = false;
             this.lV_Cables.View = System.Windows.Forms.View.Details;
             // 
-            // Name
+            // CableName
             // 
-            this.Name.Tag = "Name";
-            this.Name.Text = "Kablo Adı";
-            this.Name.Width = 86;
+            this.CableName.Tag = "CableName";
+            this.CableName.Text = "Kablo Adı";
+            this.CableName.Width = 86;
             // 
-            // Section
+            // CableSection
             // 
-            this.Section.Tag = "Section";
-            this.Section.Text = "Kablo Kesiti";
-            this.Section.Width = 75;
+            this.CableSection.Tag = "CableSection";
+            this.CableSection.Text = "Kablo Kesiti";
+            this.CableSection.Width = 75;
             // 
             // OuterDiameter
             // 
@@ -85,6 +85,7 @@
             // 
             // btn_Update
             // 
+            this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Update.Location = new System.Drawing.Point(800, 20);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(60, 35);
@@ -93,15 +94,16 @@
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
-            // btn_AddCable
+            // btn_Add
             // 
-            this.btn_AddCable.Location = new System.Drawing.Point(866, 20);
-            this.btn_AddCable.Name = "btn_AddCable";
-            this.btn_AddCable.Size = new System.Drawing.Size(60, 35);
-            this.btn_AddCable.TabIndex = 2;
-            this.btn_AddCable.Text = "Ekle";
-            this.btn_AddCable.UseVisualStyleBackColor = true;
-            this.btn_AddCable.Click += new System.EventHandler(this.btn_AddCable_Click);
+            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Add.Location = new System.Drawing.Point(866, 20);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(60, 35);
+            this.btn_Add.TabIndex = 2;
+            this.btn_Add.Text = "Ekle";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_AddCable_Click);
             // 
             // ListCablesForm
             // 
@@ -109,10 +111,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(970, 561);
             this.ControlBox = false;
-            this.Controls.Add(this.btn_AddCable);
+            this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.lV_Cables);
-            //this.Name = "ListCablesForm";
+            this.Name = "ListCablesForm";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.ListCablesForm_Load);
             this.ResumeLayout(false);
@@ -122,12 +124,12 @@
         #endregion
 
         private System.Windows.Forms.ListView lV_Cables;
-        private System.Windows.Forms.ColumnHeader Name;
-        private System.Windows.Forms.ColumnHeader Section;
+        private System.Windows.Forms.ColumnHeader CableName;
+        private System.Windows.Forms.ColumnHeader CableSection;
         private System.Windows.Forms.ColumnHeader OuterDiameter;
         private System.Windows.Forms.ColumnHeader Direction;
         private System.Windows.Forms.ColumnHeader Color;
         private System.Windows.Forms.Button btn_Update;
-        private System.Windows.Forms.Button btn_AddCable;
+        private System.Windows.Forms.Button btn_Add;
     }
 }

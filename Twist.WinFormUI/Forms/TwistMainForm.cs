@@ -7,6 +7,7 @@ using Twist.ORM;
 using Twist.Entity.LanguageMangEntity;
 using System.Collections;
 using WindowsFormsApp1.Forms;
+using EasyModbus;
 
 namespace Twist.WinFormUI.Forms
 {
@@ -15,6 +16,8 @@ namespace Twist.WinFormUI.Forms
         Dictionary<Type, Form> ActiveForms;
         List<Language> languages = new List<Language>();
         Form ChildForm = null;
+        ModbusClient modbusClient;
+
         public TwistMainForm()
         {
             
@@ -97,12 +100,15 @@ namespace Twist.WinFormUI.Forms
 
         private void btn_DisConnect_Click(object sender, EventArgs e)
         {
+            modbusClient = new ModbusClient();
+            modbusClient.Disconnect();
 
         }
 
         private void btn_Connect_Click(object sender, EventArgs e)
         {
-
+            modbusClient = new ModbusClient();
+            modbusClient.Connect();
         }
 
         private void btn_Products_Click(object sender, EventArgs e)
@@ -228,7 +234,7 @@ namespace Twist.WinFormUI.Forms
             pictureB_MiniBtn.Location = new Point(pictureB_FullScreenBtn.Location.X - (pictureB_MiniBtn.Width + 5), 5);
             combo_Languages.Location = new Point(this.Width - (combo_Languages.Width + 10), 30);
 
-            pictureBox_EksonLogo.Location = new Point(0, Panel_LeftMenu.Height - pictureBox_EksonLogo.Height - 10);
+            pictureBox_EksonLogo.Location = new Point(0, Panel_LeftMenu.Height - pictureBox_EksonLogo.Height - 5);
         }
 
         private void pictureBox_EksonLogo_Click(object sender, EventArgs e)

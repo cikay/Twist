@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btn_Add" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
   <data name="btn_Cables" xml:space="preserve">
     <value>Kablolar</value>
   </data>
@@ -128,6 +131,9 @@
   </data>
   <data name="btn_Products" xml:space="preserve">
     <value>Ürünler</value>
+  </data>
+  <data name="btn_Update" xml:space="preserve">
+    <value>Güncelle</value>
   </data>
   <data name="btn_Users" xml:space="preserve">
     <value>Kullanıcılar</value>

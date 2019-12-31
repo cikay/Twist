@@ -509,6 +509,7 @@
             // 
             // btn_AddProduct
             // 
+            this.btn_AddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AddProduct.Location = new System.Drawing.Point(436, 301);
             this.btn_AddProduct.Name = "btn_AddProduct";
             this.btn_AddProduct.Size = new System.Drawing.Size(74, 34);

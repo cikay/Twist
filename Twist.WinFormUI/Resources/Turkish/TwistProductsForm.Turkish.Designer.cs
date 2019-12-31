@@ -97,6 +97,24 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ekle.
+        /// </summary>
+        internal static string btn_Add {
+            get {
+                return ResourceManager.GetString("btn_Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Güncelle.
+        /// </summary>
+        internal static string btn_Update {
+            get {
+                return ResourceManager.GetString("btn_Update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Burulma Sonrasi Boy 1.
         /// </summary>
         internal static string BurulmaSonrasiBoy1 {

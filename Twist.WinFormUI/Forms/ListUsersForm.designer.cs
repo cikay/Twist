@@ -35,7 +35,7 @@
             this.Level = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ProtectionInfo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_Update = new System.Windows.Forms.Button();
-            this.btn_AddAccount = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lV_Users
@@ -86,6 +86,7 @@
             // 
             // btn_Update
             // 
+            this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Update.Location = new System.Drawing.Point(800, 20);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(60, 35);
@@ -94,22 +95,23 @@
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
-            // btn_AddAccount
+            // btn_Add
             // 
-            this.btn_AddAccount.Location = new System.Drawing.Point(866, 20);
-            this.btn_AddAccount.Name = "btn_AddAccount";
-            this.btn_AddAccount.Size = new System.Drawing.Size(60, 35);
-            this.btn_AddAccount.TabIndex = 2;
-            this.btn_AddAccount.Text = "Ekle";
-            this.btn_AddAccount.UseVisualStyleBackColor = true;
-            this.btn_AddAccount.Click += new System.EventHandler(this.btn_AddAccount_Click);
+            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Add.Location = new System.Drawing.Point(866, 20);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(60, 35);
+            this.btn_Add.TabIndex = 2;
+            this.btn_Add.Text = "Ekle";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_AddAccount_Click);
             // 
             // ListUsersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 585);
-            this.Controls.Add(this.btn_AddAccount);
+            this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.lV_Users);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -129,6 +131,6 @@
         private System.Windows.Forms.ColumnHeader Level;
         private System.Windows.Forms.ColumnHeader ProtectionInfo;
         private System.Windows.Forms.Button btn_Update;
-        private System.Windows.Forms.Button btn_AddAccount;
+        private System.Windows.Forms.Button btn_Add;
     }
 }

@@ -129,6 +129,12 @@
   <data name="BackSpeed" xml:space="preserve">
     <value>Back Speed</value>
   </data>
+  <data name="btn_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btn_Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
   <data name="BurulmaSonrasiBoy1" xml:space="preserve">
     <value>Burulma Sonrasi Boy 1</value>
   </data>

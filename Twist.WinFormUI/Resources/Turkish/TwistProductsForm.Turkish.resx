@@ -129,6 +129,12 @@
   <data name="BackSpeed" xml:space="preserve">
     <value>Geri Hız</value>
   </data>
+  <data name="btn_Add" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="btn_Update" xml:space="preserve">
+    <value>Güncelle</value>
+  </data>
   <data name="BurulmaSonrasiBoy1" xml:space="preserve">
     <value>Burulma Sonrasi Boy 1</value>
   </data>

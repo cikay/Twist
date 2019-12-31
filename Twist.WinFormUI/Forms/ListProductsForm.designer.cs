@@ -41,7 +41,7 @@
             this.cms_ProductDetails = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.detailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Update = new System.Windows.Forms.Button();
-            this.btn_AddProduct = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
             this.cms_ProductDetails.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,6 +131,7 @@
             // 
             // btn_Update
             // 
+            this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Update.Location = new System.Drawing.Point(986, 12);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(60, 35);
@@ -139,15 +140,16 @@
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
-            // btn_AddProduct
+            // btn_Add
             // 
-            this.btn_AddProduct.Location = new System.Drawing.Point(1052, 12);
-            this.btn_AddProduct.Name = "btn_AddProduct";
-            this.btn_AddProduct.Size = new System.Drawing.Size(60, 35);
-            this.btn_AddProduct.TabIndex = 40;
-            this.btn_AddProduct.Text = "Ekle";
-            this.btn_AddProduct.UseVisualStyleBackColor = true;
-            this.btn_AddProduct.Click += new System.EventHandler(this.btn_AddProduct_Click);
+            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Add.Location = new System.Drawing.Point(1052, 12);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(60, 35);
+            this.btn_Add.TabIndex = 40;
+            this.btn_Add.Text = "Ekle";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_AddProduct_Click);
             // 
             // ListProductsForm
             // 
@@ -155,7 +157,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1144, 547);
             this.ControlBox = false;
-            this.Controls.Add(this.btn_AddProduct);
+            this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.listView_Products);
             this.Name = "ListProductsForm";
@@ -180,6 +182,6 @@
         private System.Windows.Forms.ContextMenuStrip cms_ProductDetails;
         private System.Windows.Forms.ToolStripMenuItem detailsToolStripMenuItem;
         private System.Windows.Forms.Button btn_Update;
-        private System.Windows.Forms.Button btn_AddProduct;
+        private System.Windows.Forms.Button btn_Add;
     }
 }

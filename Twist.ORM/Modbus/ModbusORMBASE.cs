@@ -13,16 +13,31 @@ namespace Twist.ORM
 {
     public class ModbusORMBASE
     {
-        public Modbus modbus = new Modbus();
+
+        public ModbusClient modbusClient = new ModbusClient() { IPAddress = "192.168.2.86", Port = 502 };
+
+        public ModbusORMBASE()
+        {
+            try
+            {
+                modbusClient.Connect();
+            }
+            catch (Exception)
+            {
+            }
+           
+
+        }
 
         public WriteOrReadDataType DataExchangeProtocol(ProtocolInfo protocolInfo)
         {
+            if (modbusClient.Connected) return WriteOrReadDataType.Non;
             int[] Values = new int[100];
 
-            modbus.modbusClient.WriteSingleRegister((int)RegisterAdress.AccessSystem, (int)AccessSystem.talep); //sistem erişim talebi
-            modbus.modbusClient.WriteSingleCoil(135, true);
+            modbusClient.WriteSingleRegister((int)RegisterAdress.AccessSystem, (int)AccessSystem.talep); //sistem erişim talebi
+            modbusClient.WriteSingleCoil(135, true);
             Thread.Sleep(250);
-            Values = modbus.modbusClient.ReadHoldingRegisters((int)RegisterAdress.AccessSystem, 1);
+            Values = modbusClient.ReadHoldingRegisters((int)RegisterAdress.AccessSystem, 1);
 
             try
             {
@@ -32,10 +47,10 @@ namespace Twist.ORM
 
                     int[] reqData = new int[] { (int)RequestData.talep, (int)protocolInfo.requestDataType, (int)protocolInfo.comType, (int)DataExchangeStatus.musait, (int)DataExchangeStatus.musait, (int)DataExchangeStatus.musait };
 
-                    modbus.modbusClient.WriteMultipleRegisters((int)RegisterAdress.RequestData, reqData); //veri talebi
-                    modbus.modbusClient.WriteSingleCoil(135, true);
+                    modbusClient.WriteMultipleRegisters((int)RegisterAdress.RequestData, reqData); //veri talebi
+                    modbusClient.WriteSingleCoil(135, true);
                     Thread.Sleep(200);
-                    Values = modbus.modbusClient.ReadHoldingRegisters((int)RegisterAdress.RequestData, 4); //veri talebi durumu
+                    Values = modbusClient.ReadHoldingRegisters((int)RegisterAdress.RequestData, 4); //veri talebi durumu
 
                     if (Values[0] == (int)RequestData.onay)
                     {
@@ -95,8 +110,9 @@ namespace Twist.ORM
             return WriteOrReadDataType.Non;
         }
 
-        public void SendData<T>(T data)
+        public bool SendData<T>(T data)
         {
+            if (modbusClient.Connected) return false;
             PropertyInfo[] Properties = typeof(T).GetProperties();
 
             foreach (var prop in Properties)
@@ -110,24 +126,27 @@ namespace Twist.ORM
 
                 for (int i = 0; i < byteArray.Length; i++) intArray[i] = (int)byteArray[i];
 
-                modbus.modbusClient.WriteMultipleRegisters(StartingAdress, intArray);
+                modbusClient.WriteMultipleRegisters(StartingAdress, intArray);
 
             }
+
+            return true;
+
         }
 
         public Dictionary<int, T> GetData<T>()
         {
-
             Dictionary<int, T> DataCollection = new Dictionary<int, T>();
+            if (!modbusClient.Connected) return DataCollection = null;
 
-            int[] veriDurumu = modbus.modbusClient.ReadHoldingRegisters((int)RegisterAdress.DataStatus, 1);
+            int[] veriDurumu = modbusClient.ReadHoldingRegisters((int)RegisterAdress.DataStatus, 1);
             if (veriDurumu[0] != (int)DataExchangeStatus.hazir)
             {
                 DataCollection = null;
                 return DataCollection;
             }
 
-            int[] AccountCount = modbus.modbusClient.ReadHoldingRegisters((int)RegisterAdress.DataCount, 1);
+            int[] AccountCount = modbusClient.ReadHoldingRegisters((int)RegisterAdress.DataCount, 1);
             PropertyInfo[] Properties = typeof(T).GetProperties();
             string stringValue = string.Empty;
             int startingAdress = 0;
@@ -144,7 +163,7 @@ namespace Twist.ORM
                     startingAdress += parameters.StartingAdress;
 
 
-                    int[] registerValues = modbus.modbusClient.ReadHoldingRegisters(5000 + startingAdress, length);
+                    int[] registerValues = modbusClient.ReadHoldingRegisters(5000 + startingAdress, length);
 
                     if (parameters.ConvertToAsciiString)
                     {
@@ -167,7 +186,7 @@ namespace Twist.ORM
                 DataCollection.Add(i, data);
             }
             int[] alindi = { (int)DataExchangeStatus.alindi };
-            modbus.modbusClient.WriteMultipleRegisters((int)RegisterAdress.DataStatus, alindi);
+            modbusClient.WriteMultipleRegisters((int)RegisterAdress.DataStatus, alindi);
             return DataCollection;
         }
 

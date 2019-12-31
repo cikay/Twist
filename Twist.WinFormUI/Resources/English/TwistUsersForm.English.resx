@@ -120,6 +120,12 @@
   <data name="BarcodPin" xml:space="preserve">
     <value>Barcod Pin</value>
   </data>
+  <data name="btn_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btn_Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
   <data name="Level" xml:space="preserve">
     <value>Level</value>
   </data>

@@ -197,9 +197,9 @@
             // pictureBox_EksonLogo
             // 
             this.pictureBox_EksonLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_EksonLogo.Image")));
-            this.pictureBox_EksonLogo.Location = new System.Drawing.Point(3, 425);
+            this.pictureBox_EksonLogo.Location = new System.Drawing.Point(0, 425);
             this.pictureBox_EksonLogo.Name = "pictureBox_EksonLogo";
-            this.pictureBox_EksonLogo.Size = new System.Drawing.Size(130, 31);
+            this.pictureBox_EksonLogo.Size = new System.Drawing.Size(133, 31);
             this.pictureBox_EksonLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_EksonLogo.TabIndex = 1;
             this.pictureBox_EksonLogo.TabStop = false;

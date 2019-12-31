@@ -61,6 +61,15 @@ namespace Twist.WinFormUI.Resources.English {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add.
+        /// </summary>
+        internal static string btn_Add {
+            get {
+                return ResourceManager.GetString("btn_Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cables.
         /// </summary>
         internal static string btn_Cables {
@@ -93,6 +102,15 @@ namespace Twist.WinFormUI.Resources.English {
         internal static string btn_Products {
             get {
                 return ResourceManager.GetString("btn_Products", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        internal static string btn_Update {
+            get {
+                return ResourceManager.GetString("btn_Update", resourceCulture);
             }
         }
         
