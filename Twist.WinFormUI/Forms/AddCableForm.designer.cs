@@ -28,63 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lb_CableName = new System.Windows.Forms.Label();
+            this.lb_CableSection = new System.Windows.Forms.Label();
+            this.lb_CableDirection = new System.Windows.Forms.Label();
+            this.lb_OuterDiameter = new System.Windows.Forms.Label();
+            this.lb_CableColor = new System.Windows.Forms.Label();
             this.txt_CableName = new System.Windows.Forms.TextBox();
             this.txt_CableSection = new System.Windows.Forms.TextBox();
             this.txt_OuterDiameter = new System.Windows.Forms.TextBox();
             this.txt_Direction = new System.Windows.Forms.TextBox();
             this.txt_Color = new System.Windows.Forms.TextBox();
-            this.btn_AddCable = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lb_CableName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kablo Adı:";
+            this.lb_CableName.AutoSize = true;
+            this.lb_CableName.Location = new System.Drawing.Point(45, 45);
+            this.lb_CableName.Name = "lb_CableName";
+            this.lb_CableName.Size = new System.Drawing.Size(55, 13);
+            this.lb_CableName.TabIndex = 0;
+            this.lb_CableName.Text = "Kablo Adı:";
             // 
-            // label2
+            // lb_CableSection
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 74);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Kesiti:";
+            this.lb_CableSection.AutoSize = true;
+            this.lb_CableSection.Location = new System.Drawing.Point(65, 74);
+            this.lb_CableSection.Name = "lb_CableSection";
+            this.lb_CableSection.Size = new System.Drawing.Size(35, 13);
+            this.lb_CableSection.TabIndex = 0;
+            this.lb_CableSection.Text = "Kesiti:";
             // 
-            // label3
+            // lb_CableDirection
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Yön:";
+            this.lb_CableDirection.AutoSize = true;
+            this.lb_CableDirection.Location = new System.Drawing.Point(71, 126);
+            this.lb_CableDirection.Name = "lb_CableDirection";
+            this.lb_CableDirection.Size = new System.Drawing.Size(29, 13);
+            this.lb_CableDirection.TabIndex = 0;
+            this.lb_CableDirection.Text = "Yön:";
             // 
-            // label4
+            // lb_OuterDiameter
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 104);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Dış Çap:";
+            this.lb_OuterDiameter.AutoSize = true;
+            this.lb_OuterDiameter.Location = new System.Drawing.Point(53, 104);
+            this.lb_OuterDiameter.Name = "lb_OuterDiameter";
+            this.lb_OuterDiameter.Size = new System.Drawing.Size(47, 13);
+            this.lb_OuterDiameter.TabIndex = 0;
+            this.lb_OuterDiameter.Text = "Dış Çap:";
             // 
-            // label5
+            // lb_CableColor
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(64, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Renk:";
+            this.lb_CableColor.AutoSize = true;
+            this.lb_CableColor.Location = new System.Drawing.Point(64, 149);
+            this.lb_CableColor.Name = "lb_CableColor";
+            this.lb_CableColor.Size = new System.Drawing.Size(36, 13);
+            this.lb_CableColor.TabIndex = 0;
+            this.lb_CableColor.Text = "Renk:";
             // 
             // txt_CableName
             // 
@@ -121,32 +121,33 @@
             this.txt_Color.Size = new System.Drawing.Size(100, 20);
             this.txt_Color.TabIndex = 1;
             // 
-            // btn_AddCable
+            // btn_Add
             // 
-            this.btn_AddCable.Location = new System.Drawing.Point(106, 188);
-            this.btn_AddCable.Name = "btn_AddCable";
-            this.btn_AddCable.Size = new System.Drawing.Size(75, 29);
-            this.btn_AddCable.TabIndex = 2;
-            this.btn_AddCable.Text = "Ekle";
-            this.btn_AddCable.UseVisualStyleBackColor = true;
-            this.btn_AddCable.Click += new System.EventHandler(this.btn_AddCable_Click);
+            this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Add.Location = new System.Drawing.Point(106, 188);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(75, 29);
+            this.btn_Add.TabIndex = 2;
+            this.btn_Add.Text = "Ekle";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_AddCable_Click);
             // 
             // AddCableForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(307, 272);
-            this.Controls.Add(this.btn_AddCable);
+            this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.txt_Color);
             this.Controls.Add(this.txt_Direction);
             this.Controls.Add(this.txt_OuterDiameter);
             this.Controls.Add(this.txt_CableSection);
             this.Controls.Add(this.txt_CableName);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lb_OuterDiameter);
+            this.Controls.Add(this.lb_CableColor);
+            this.Controls.Add(this.lb_CableDirection);
+            this.Controls.Add(this.lb_CableSection);
+            this.Controls.Add(this.lb_CableName);
             this.Name = "AddCableForm";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.AddCableForm_Load);
@@ -157,16 +158,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lb_CableName;
+        private System.Windows.Forms.Label lb_CableSection;
+        private System.Windows.Forms.Label lb_CableDirection;
+        private System.Windows.Forms.Label lb_OuterDiameter;
+        private System.Windows.Forms.Label lb_CableColor;
         private System.Windows.Forms.TextBox txt_CableName;
         private System.Windows.Forms.TextBox txt_CableSection;
         private System.Windows.Forms.TextBox txt_OuterDiameter;
         private System.Windows.Forms.TextBox txt_Direction;
         private System.Windows.Forms.TextBox txt_Color;
-        private System.Windows.Forms.Button btn_AddCable;
+        private System.Windows.Forms.Button btn_Add;
     }
 }

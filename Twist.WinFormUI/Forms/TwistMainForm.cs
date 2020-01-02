@@ -8,6 +8,7 @@ using Twist.Entity.LanguageMangEntity;
 using System.Collections;
 using WindowsFormsApp1.Forms;
 using EasyModbus;
+using Twist.WinFormUI.Classes;
 
 namespace Twist.WinFormUI.Forms
 {
@@ -31,55 +32,11 @@ namespace Twist.WinFormUI.Forms
         {
             NewLocation();
             combo_Languages.Text = "Change Language";
-
-            Language Turkish = new Language {
-                Name = "Turkish",
-                TwistMainForm = new FormInfo {
-                    FormName = "TwistMainForm",
-                    Path = "E:/Yazılım projeleri/Twist/Twist.WinFormUI/Resources/Turkish/TwistMainForm.Turkish.resx",
-                },
-
-                ProductsForm = new FormInfo {
-                    FormName = "ListProductsForm",
-                    Path = "E:/Yazılım projeleri/Twist/Twist.WinFormUI/Resources/Turkish/TwistProductsForm.Turkish.resx",
-                },
-
-                CablesForm = new FormInfo {
-                    FormName = "ListCablesForm",
-                    Path = "E:/Yazılım projeleri/Twist/Twist.WinFormUI/Resources/Turkish/TwistCablesForm.Turkish.resx",
-                },
-                UsersForm = new FormInfo {
-                    FormName = "ListUsersForm",
-                    Path = "E:/Yazılım projeleri/Twist/Twist.WinFormUI/Resources/Turkish/TwistUsersForm.Turkish.resx",
-                },
-            };
-
-            Language English = new Language {
-                Name = "English",
-                TwistMainForm = new FormInfo
-                {
-                    FormName="TwistMainForm",
-                    Path = "E:/Yazılım projeleri/Twist/Twist.WinFormUI/Resources/English/TwistMainForm.English.resx",
-                },
-
-                ProductsForm = new FormInfo {
-                    FormName = "ListProductsForm",
-                    Path = "E:/Yazılım projeleri/Twist/Twist.WinFormUI/Resources/English/TwistProductsForm.English.resx",
-                },
-                CablesForm = new FormInfo {
-                    FormName= "ListCablesForm",
-                    Path = "E:/Yazılım projeleri/Twist/Twist.WinFormUI/Resources/English/TwistCablesForm.English.resx",
-                },
-                UsersForm = new FormInfo {
-                    FormName= "ListUsersForm",
-                    Path = "E:/Yazılım projeleri/Twist/Twist.WinFormUI/Resources/English/TwistUsersForm.English.resx",
-                },
-
-            };
-
-            combo_Languages.Items.Add(Turkish);
-            combo_Languages.Items.Add(English);
-            SetLanguage(Turkish.TwistMainForm.Path);
+            LanguagesList languageList = new LanguagesList();
+            foreach(Language language in languageList)
+            {
+                combo_Languages.Items.Add(language);
+            }
         }
 
         private void pictureB_MiniBtn_Click(object sender, EventArgs e)
@@ -145,10 +102,8 @@ namespace Twist.WinFormUI.Forms
                 ActiveForms.Add(typeof(T), ChildForm);
             }
             ChildForm.SetBounds(0, 0, this.Width, this.Height);
-            Language language = (Language)combo_Languages.SelectedItem;
-
-            SetChildFormLanguage(ChildForm);
-           
+            SetLanguage.SetChildFormLanguage(ChildForm, combo_Languages);
+            //Language language = (Language)combo_Languages.SelectedItem;
 
         }
 
@@ -160,12 +115,13 @@ namespace Twist.WinFormUI.Forms
         {
             Language language = (Language)combo_Languages.SelectedItem;
 
-            SetLanguage(language.TwistMainForm.Path);
-            SetChildFormLanguage(ChildForm);
+            SetMainFormLanguage(language.TwistMainForm.Path);
+            SetLanguage.SetChildFormLanguage(ChildForm, combo_Languages);
+           
             
         }
 
-        private void SetLanguage(string resourcePath)
+        private void SetMainFormLanguage(string resourcePath)
         {
 
             ResXResourceReader rsxr = new ResXResourceReader(resourcePath);
@@ -185,46 +141,6 @@ namespace Twist.WinFormUI.Forms
                 }
 
             }
-        }
-
-    
-        private bool SetChildFormLanguage(Form form)
-        {
-            Language language = (Language)combo_Languages.SelectedItem;
-            if (form == null || language==null) return false;
-            ResXResourceReader rsxr = null;
-            foreach (var info in language)
-            {
-                if (string.Compare(form.Name, info.FormName) == 0)
-                {
-                    rsxr = new ResXResourceReader(info.Path);
-                    break;
-                }
-            }
-
-
-            foreach (Control control in form.Controls)
-            {
-                foreach (DictionaryEntry langInfo in rsxr)
-                {
-                    if(control is ListView)
-                    {
-                        ListView listView = (ListView)control;
-
-                        foreach(ColumnHeader column in listView.Columns)
-                        {
-                            if(string.Compare(column.Tag.ToString(), langInfo.Key.ToString()) == 0 )
-                            {
-                                column.Text = langInfo.Value.ToString();
-                            }
-                        }
-                    }
-                    
-                }
-            }
-
-            return true;
-
         }
 
         private void NewLocation()

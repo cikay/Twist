@@ -22,14 +22,14 @@ namespace Twist.WinFormUI.Resources.Turkish {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class TwistMainForm_Turkish {
+    internal class Twist_ListUsersForm_Turkish {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal TwistMainForm_Turkish() {
+        internal Twist_ListUsersForm_Turkish() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Twist.WinFormUI.Resources.Turkish.TwistMainForm.Turkish", typeof(TwistMainForm_Turkish).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Twist.WinFormUI.Resources.Turkish.Twist.ListUsersForm.Turkish", typeof(Twist_ListUsersForm_Turkish).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,47 +61,20 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Barkod Pin.
+        /// </summary>
+        internal static string BarcodPin {
+            get {
+                return ResourceManager.GetString("BarcodPin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ekle.
         /// </summary>
         internal static string btn_Add {
             get {
                 return ResourceManager.GetString("btn_Add", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Kablolar.
-        /// </summary>
-        internal static string btn_Cables {
-            get {
-                return ResourceManager.GetString("btn_Cables", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Bağlan.
-        /// </summary>
-        internal static string btn_Connect {
-            get {
-                return ResourceManager.GetString("btn_Connect", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Bağlantıyı Kes.
-        /// </summary>
-        internal static string btn_DisConnect {
-            get {
-                return ResourceManager.GetString("btn_DisConnect", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ürünler.
-        /// </summary>
-        internal static string btn_Products {
-            get {
-                return ResourceManager.GetString("btn_Products", resourceCulture);
             }
         }
         
@@ -115,38 +88,38 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kullanıcılar.
+        ///   Looks up a localized string similar to Yetki.
         /// </summary>
-        internal static string btn_Users {
+        internal static string Level {
             get {
-                return ResourceManager.GetString("btn_Users", resourceCulture);
+                return ResourceManager.GetString("Level", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sistem erişimi yok!.
+        ///   Looks up a localized string similar to Pin.
         /// </summary>
-        internal static string label_AccessSystem {
+        internal static string Pin {
             get {
-                return ResourceManager.GetString("label_AccessSystem", resourceCulture);
+                return ResourceManager.GetString("Pin", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bağlantı yok!.
+        ///   Looks up a localized string similar to Koruma Bilgisi.
         /// </summary>
-        internal static string label_ConnectionStatus {
+        internal static string ProtectionInfo {
             get {
-                return ResourceManager.GetString("label_ConnectionStatus", resourceCulture);
+                return ResourceManager.GetString("ProtectionInfo", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Data erişimi yok!.
+        ///   Looks up a localized string similar to Kullanıcı Adı.
         /// </summary>
-        internal static string label_DataRequest {
+        internal static string UserName {
             get {
-                return ResourceManager.GetString("label_DataRequest", resourceCulture);
+                return ResourceManager.GetString("UserName", resourceCulture);
             }
         }
     }

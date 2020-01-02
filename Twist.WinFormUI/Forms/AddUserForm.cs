@@ -7,9 +7,9 @@ using Twist.ORM;
 
 namespace WindowsFormsApp1.Forms
 {
-    public partial class AddAccountForm : Form
+    public partial class AddUserForm : Form
     {
-        public AddAccountForm()
+        public AddUserForm()
         {
             InitializeComponent();
         }

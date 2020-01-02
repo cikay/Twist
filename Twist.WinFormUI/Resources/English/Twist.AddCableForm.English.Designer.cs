@@ -22,14 +22,14 @@ namespace Twist.WinFormUI.Resources.English {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class TwistMainForm_English {
+    internal class Twist_AddCableForm_English {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal TwistMainForm_English() {
+        internal Twist_AddCableForm_English() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Twist.WinFormUI.Resources.English {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Twist.WinFormUI.Resources.English.TwistMainForm.English", typeof(TwistMainForm_English).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Twist.WinFormUI.Resources.English.Twist.AddCableForm.English", typeof(Twist_AddCableForm_English).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -70,83 +70,47 @@ namespace Twist.WinFormUI.Resources.English {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cables.
+        ///   Looks up a localized string similar to Cable Color:.
         /// </summary>
-        internal static string btn_Cables {
+        internal static string lb_CableColor {
             get {
-                return ResourceManager.GetString("btn_Cables", resourceCulture);
+                return ResourceManager.GetString("lb_CableColor", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Connect.
+        ///   Looks up a localized string similar to Cable Direction:.
         /// </summary>
-        internal static string btn_Connect {
+        internal static string lb_CableDirection {
             get {
-                return ResourceManager.GetString("btn_Connect", resourceCulture);
+                return ResourceManager.GetString("lb_CableDirection", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disconnect.
+        ///   Looks up a localized string similar to Cable Name:.
         /// </summary>
-        internal static string btn_DisConnect {
+        internal static string lb_CableName {
             get {
-                return ResourceManager.GetString("btn_DisConnect", resourceCulture);
+                return ResourceManager.GetString("lb_CableName", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Products.
+        ///   Looks up a localized string similar to Cable Outer Diameter:.
         /// </summary>
-        internal static string btn_Products {
+        internal static string lb_CableOuterDiameter {
             get {
-                return ResourceManager.GetString("btn_Products", resourceCulture);
+                return ResourceManager.GetString("lb_CableOuterDiameter", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update.
+        ///   Looks up a localized string similar to Cable Section:.
         /// </summary>
-        internal static string btn_Update {
+        internal static string lb_CableSection {
             get {
-                return ResourceManager.GetString("btn_Update", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Users.
-        /// </summary>
-        internal static string btn_Users {
-            get {
-                return ResourceManager.GetString("btn_Users", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No access system.
-        /// </summary>
-        internal static string label_AccessSystem {
-            get {
-                return ResourceManager.GetString("label_AccessSystem", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No connection.
-        /// </summary>
-        internal static string label_ConnectionStatus {
-            get {
-                return ResourceManager.GetString("label_ConnectionStatus", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Data not request.
-        /// </summary>
-        internal static string label_DataRequest {
-            get {
-                return ResourceManager.GetString("label_DataRequest", resourceCulture);
+                return ResourceManager.GetString("lb_CableSection", resourceCulture);
             }
         }
     }

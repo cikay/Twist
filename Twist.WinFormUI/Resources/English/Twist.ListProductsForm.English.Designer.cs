@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Twist.WinFormUI.Resources.Turkish {
+namespace Twist.WinFormUI.Resources.English {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Twist.WinFormUI.Resources.Turkish {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class TwistProductsForm_Turkish {
+    internal class Twist_ListProductsForm_English {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal TwistProductsForm_Turkish() {
+        internal Twist_ListProductsForm_English() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Twist.WinFormUI.Resources.Turkish.TwistProductsForm.Turkish", typeof(TwistProductsForm_Turkish).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Twist.WinFormUI.Resources.English.Twist.ListProductsForm.English", typeof(Twist_ListProductsForm_English).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Geri Hızlanma.
+        ///   Looks up a localized string similar to Back Acceleration.
         /// </summary>
         internal static string BackAcceleration {
             get {
@@ -70,7 +70,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Geri Tur.
+        ///   Looks up a localized string similar to Back Circuit.
         /// </summary>
         internal static string BackCircuit {
             get {
@@ -79,7 +79,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Geri Yavaşlama.
+        ///   Looks up a localized string similar to Back Deceleration.
         /// </summary>
         internal static string BackDeceleration {
             get {
@@ -88,7 +88,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Geri Hız.
+        ///   Looks up a localized string similar to Back Speed.
         /// </summary>
         internal static string BackSpeed {
             get {
@@ -97,7 +97,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ekle.
+        ///   Looks up a localized string similar to Add.
         /// </summary>
         internal static string btn_Add {
             get {
@@ -106,7 +106,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Güncelle.
+        ///   Looks up a localized string similar to Update.
         /// </summary>
         internal static string btn_Update {
             get {
@@ -133,7 +133,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kablo 1 Renk.
+        ///   Looks up a localized string similar to Cable 1 Color.
         /// </summary>
         internal static string Cable1Color {
             get {
@@ -142,7 +142,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kablo 2 Renk.
+        ///   Looks up a localized string similar to Cable 2 Color.
         /// </summary>
         internal static string Cable2Color {
             get {
@@ -151,7 +151,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kablo çapı.
+        ///   Looks up a localized string similar to Cable Diameter.
         /// </summary>
         internal static string CableDiameter {
             get {
@@ -160,7 +160,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kablo yönü.
+        ///   Looks up a localized string similar to Cable Direction.
         /// </summary>
         internal static string CableDirection {
             get {
@@ -169,7 +169,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kablo Bırakma Süres,.
+        ///   Looks up a localized string similar to Cable Release Duration.
         /// </summary>
         internal static string CableReleaseDuration {
             get {
@@ -178,7 +178,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kablo Kesiti.
+        ///   Looks up a localized string similar to Cable Section.
         /// </summary>
         internal static string CableSection {
             get {
@@ -187,7 +187,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to İleri Hızlanma.
+        ///   Looks up a localized string similar to Foward Acceleration.
         /// </summary>
         internal static string FowardAcceleration {
             get {
@@ -196,7 +196,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to İleri Tur.
+        ///   Looks up a localized string similar to Foward Circuit.
         /// </summary>
         internal static string FowardCircuit {
             get {
@@ -205,7 +205,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to İleri Yavaşlama.
+        ///   Looks up a localized string similar to Foward Deceleration.
         /// </summary>
         internal static string FowardDeceleration {
             get {
@@ -214,7 +214,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to İleri Hız.
+        ///   Looks up a localized string similar to Foward Speed.
         /// </summary>
         internal static string FowardSpeed {
             get {
@@ -223,7 +223,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Etiket Adı.
+        ///   Looks up a localized string similar to Label Name.
         /// </summary>
         internal static string LabelName {
             get {
@@ -232,7 +232,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hatve Boyu.
+        ///   Looks up a localized string similar to Pitch Dimesion.
         /// </summary>
         internal static string PitchDimesion {
             get {
@@ -241,7 +241,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ürün Adı.
+        ///   Looks up a localized string similar to Product Name.
         /// </summary>
         internal static string ProductName {
             get {
@@ -250,7 +250,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Miktar.
+        ///   Looks up a localized string similar to Quantity.
         /// </summary>
         internal static string Quantity {
             get {
@@ -277,7 +277,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tur Arası Bekleme.
+        ///   Looks up a localized string similar to Tour Interregnum Waiting.
         /// </summary>
         internal static string TourInterregnumWaiting {
             get {

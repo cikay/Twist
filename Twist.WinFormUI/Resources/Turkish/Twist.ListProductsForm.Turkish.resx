@@ -174,7 +174,7 @@
   <data name="LabelName" xml:space="preserve">
     <value>Etiket Adı</value>
   </data>
-  <data name="PitchDimesion" xml:space="preserve">
+  <data name="PitchLength" xml:space="preserve">
     <value>Hatve Boyu</value>
   </data>
   <data name="ProductName" xml:space="preserve">

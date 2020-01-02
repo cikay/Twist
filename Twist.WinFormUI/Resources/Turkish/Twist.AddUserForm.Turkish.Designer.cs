@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Twist.WinFormUI.Resources.English {
+namespace Twist.WinFormUI.Resources.Turkish {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Twist.WinFormUI.Resources.English {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class TwistUsersForm_English {
+    internal class Twist_AddUserForm_Turkish {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal TwistUsersForm_English() {
+        internal Twist_AddUserForm_Turkish() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Twist.WinFormUI.Resources.English {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Twist.WinFormUI.Resources.English.TwistUsersForm.English", typeof(TwistUsersForm_English).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Twist.WinFormUI.Resources.Turkish.Twist.AddUserForm.Turkish", typeof(Twist_AddUserForm_Turkish).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,16 +61,7 @@ namespace Twist.WinFormUI.Resources.English {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Barcod Pin.
-        /// </summary>
-        internal static string BarcodPin {
-            get {
-                return ResourceManager.GetString("BarcodPin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Add.
+        ///   Looks up a localized string similar to Ekle.
         /// </summary>
         internal static string btn_Add {
             get {
@@ -79,47 +70,47 @@ namespace Twist.WinFormUI.Resources.English {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update.
+        ///   Looks up a localized string similar to Barkod Pin:.
         /// </summary>
-        internal static string btn_Update {
+        internal static string lb_BarcodPin {
             get {
-                return ResourceManager.GetString("btn_Update", resourceCulture);
+                return ResourceManager.GetString("lb_BarcodPin", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Level.
+        ///   Looks up a localized string similar to Yetki:.
         /// </summary>
-        internal static string Level {
+        internal static string lb_Level {
             get {
-                return ResourceManager.GetString("Level", resourceCulture);
+                return ResourceManager.GetString("lb_Level", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Pin.
+        ///   Looks up a localized string similar to Pin:.
         /// </summary>
-        internal static string Pin {
+        internal static string lb_Pin {
             get {
-                return ResourceManager.GetString("Pin", resourceCulture);
+                return ResourceManager.GetString("lb_Pin", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Protection Info.
+        ///   Looks up a localized string similar to Koruma Bilgisi:.
         /// </summary>
-        internal static string ProtectionInfo {
+        internal static string lb_ProtectionInfo {
             get {
-                return ResourceManager.GetString("ProtectionInfo", resourceCulture);
+                return ResourceManager.GetString("lb_ProtectionInfo", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User Name.
+        ///   Looks up a localized string similar to Kullanıcı Adı:.
         /// </summary>
-        internal static string UserName {
+        internal static string lb_UserName {
             get {
-                return ResourceManager.GetString("UserName", resourceCulture);
+                return ResourceManager.GetString("lb_UserName", resourceCulture);
             }
         }
     }

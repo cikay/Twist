@@ -52,7 +52,7 @@
     <Compile Include="Enums\WriteOrReadDataType.cs" />
     <Compile Include="LanguageMangEntity\FormInfo.cs" />
     <Compile Include="LanguageMangEntity\Language.cs" />
-    <Compile Include="LanguageMangEntity\MainFormInfo.cs" />
+    <Compile Include="LanguageMangEntity\LanguagesList.cs" />
     <Compile Include="Parameters.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

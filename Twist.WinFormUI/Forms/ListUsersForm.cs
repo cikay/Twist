@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Twist.Entity;
 using Twist.Entity.Enums;
 using Twist.ORM;
+using Twist.WinFormUI.Classes;
+using Twist.WinFormUI.Forms;
 
 namespace WindowsFormsApp1.Forms
 {
@@ -33,8 +36,11 @@ namespace WindowsFormsApp1.Forms
 
         private void btn_AddAccount_Click(object sender, EventArgs e)
         {
-            AddAccountForm addAccountForm = new AddAccountForm();
-            addAccountForm.ShowDialog();
+            IntPtr m = Application.OpenForms["TwistMainForm"].Handle;
+            ComboBox comboBox_Languages = TwistMainForm.FromHandle(m).Controls.Find("combo_Languages", true).FirstOrDefault() as ComboBox;
+            AddUserForm addUserForm = new AddUserForm();
+            SetLanguage.SetChildFormLanguage(addUserForm, comboBox_Languages);
+            addUserForm.ShowDialog();
         }
 
 

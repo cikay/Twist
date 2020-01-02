@@ -22,14 +22,14 @@ namespace Twist.WinFormUI.Resources.Turkish {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class TwistCablesForm_Turkish {
+    internal class Twist_MainForm_Turkish {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal TwistCablesForm_Turkish() {
+        internal Twist_MainForm_Turkish() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Twist.WinFormUI.Resources.Turkish {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Twist.WinFormUI.Resources.Turkish.TwistCablesForm.Turkish", typeof(TwistCablesForm_Turkish).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Twist.WinFormUI.Resources.Turkish.Twist.MainForm.Turkish", typeof(Twist_MainForm_Turkish).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -70,6 +70,42 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kablolar.
+        /// </summary>
+        internal static string btn_Cables {
+            get {
+                return ResourceManager.GetString("btn_Cables", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bağlan.
+        /// </summary>
+        internal static string btn_Connect {
+            get {
+                return ResourceManager.GetString("btn_Connect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bağlantıyı Kes.
+        /// </summary>
+        internal static string btn_DisConnect {
+            get {
+                return ResourceManager.GetString("btn_DisConnect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ürünler.
+        /// </summary>
+        internal static string btn_Products {
+            get {
+                return ResourceManager.GetString("btn_Products", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Güncelle.
         /// </summary>
         internal static string btn_Update {
@@ -79,47 +115,38 @@ namespace Twist.WinFormUI.Resources.Turkish {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kablo Adı.
+        ///   Looks up a localized string similar to Kullanıcılar.
         /// </summary>
-        internal static string CableName {
+        internal static string btn_Users {
             get {
-                return ResourceManager.GetString("CableName", resourceCulture);
+                return ResourceManager.GetString("btn_Users", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Kablo Kesiti.
+        ///   Looks up a localized string similar to Sistem erişimi yok!.
         /// </summary>
-        internal static string CableSection {
+        internal static string label_AccessSystem {
             get {
-                return ResourceManager.GetString("CableSection", resourceCulture);
+                return ResourceManager.GetString("label_AccessSystem", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Renk.
+        ///   Looks up a localized string similar to Bağlantı yok!.
         /// </summary>
-        internal static string Color {
+        internal static string label_ConnectionStatus {
             get {
-                return ResourceManager.GetString("Color", resourceCulture);
+                return ResourceManager.GetString("label_ConnectionStatus", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Yön.
+        ///   Looks up a localized string similar to Data erişimi yok!.
         /// </summary>
-        internal static string Direction {
+        internal static string label_DataRequest {
             get {
-                return ResourceManager.GetString("Direction", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Kablo Çapı.
-        /// </summary>
-        internal static string OuterDiameter {
-            get {
-                return ResourceManager.GetString("OuterDiameter", resourceCulture);
+                return ResourceManager.GetString("label_DataRequest", resourceCulture);
             }
         }
     }

@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Classes\DesignUI.cs" />
     <Compile Include="Classes\ListData.cs" />
+    <Compile Include="Classes\SetLanguage.cs" />
     <Compile Include="Forms\AddUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,45 +112,75 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\English\TwistCablesForm.English.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TwistCablesForm.English.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Resources\English\TwistMainForm.English.Designer.cs">
-      <DependentUpon>TwistMainForm.English.resx</DependentUpon>
+    <Compile Include="Resources\English\Twist.AddCableForm.English.Designer.cs">
+      <DependentUpon>Twist.AddCableForm.English.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Resources\English\TwistProductsForm.English.Designer.cs">
+    <Compile Include="Resources\English\Twist.ListCablesForm.English.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TwistProductsForm.English.resx</DependentUpon>
+      <DependentUpon>Twist.ListCablesForm.English.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\English\TwistUsersForm.English.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TwistUsersForm.English.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Resources\Turkish\TwistCablesForm.Turkish.Designer.cs">
-      <DependentUpon>TwistCablesForm.Turkish.resx</DependentUpon>
+    <Compile Include="Resources\English\Twist.AddUserForm.English.Designer.cs">
+      <DependentUpon>Twist.AddUserForm.English.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Resources\Turkish\TwistMainForm.Turkish.Designer.cs">
-      <DependentUpon>TwistMainForm.Turkish.resx</DependentUpon>
+    <Compile Include="Resources\English\Twist.MainForm.English.Designer.cs">
+      <DependentUpon>Twist.MainForm.English.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Resources\Turkish\TwistProductsForm.Turkish.Designer.cs">
-      <DependentUpon>TwistProductsForm.Turkish.resx</DependentUpon>
+    <Compile Include="Resources\English\Twist.AddProductForm.English.Designer.cs">
+      <DependentUpon>Twist.AddProductForm.English.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Resources\Turkish\TwistUsersForm.Turkish.Designer.cs">
+    <Compile Include="Resources\English\Twist.ListProductsForm.English.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TwistUsersForm.Turkish.resx</DependentUpon>
+      <DependentUpon>Twist.ListProductsForm.English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\English\Twist.ListUsersForm.English.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Twist.ListUsersForm.English.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Turkish\Twist.AddCableForm.Turkish.Designer.cs">
+      <DependentUpon>Twist.AddCableForm.Turkish.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Turkish\Twist.ListCablesForm.Turkish.Designer.cs">
+      <DependentUpon>Twist.ListCablesForm.Turkish.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Turkish\Twist.MainForm.Turkish.Designer.cs">
+      <DependentUpon>Twist.MainForm.Turkish.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Turkish\Twist.AddProductForm.Turkish.Designer.cs">
+      <DependentUpon>Twist.AddProductForm.Turkish.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Turkish\Twist.ListProductsForm.Turkish.Designer.cs">
+      <DependentUpon>Twist.ListProductsForm.Turkish.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Turkish\Twist.AddUserForm.Turkish.Designer.cs">
+      <DependentUpon>Twist.AddUserForm.Turkish.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\Turkish\Twist.ListUsersForm.Turkish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Twist.ListUsersForm.Turkish.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Forms\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
@@ -187,37 +218,61 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Resources\English\TwistCablesForm.English.resx">
+    <EmbeddedResource Include="Resources\English\Twist.AddCableForm.English.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>TwistCablesForm.English.Designer.cs</LastGenOutput>
+      <LastGenOutput>Twist.AddCableForm.English.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\English\TwistMainForm.English.resx">
+    <EmbeddedResource Include="Resources\English\Twist.ListCablesForm.English.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>TwistMainForm.English.Designer.cs</LastGenOutput>
+      <LastGenOutput>Twist.ListCablesForm.English.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\English\TwistProductsForm.English.resx">
+    <EmbeddedResource Include="Resources\English\Twist.AddUserForm.English.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>TwistProductsForm.English.Designer.cs</LastGenOutput>
+      <LastGenOutput>Twist.AddUserForm.English.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\English\TwistUsersForm.English.resx">
+    <EmbeddedResource Include="Resources\English\Twist.MainForm.English.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>TwistUsersForm.English.Designer.cs</LastGenOutput>
+      <LastGenOutput>Twist.MainForm.English.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Turkish\TwistCablesForm.Turkish.resx">
+    <EmbeddedResource Include="Resources\English\Twist.AddProductForm.English.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>TwistCablesForm.Turkish.Designer.cs</LastGenOutput>
+      <LastGenOutput>Twist.AddProductForm.English.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Turkish\TwistMainForm.Turkish.resx">
+    <EmbeddedResource Include="Resources\English\Twist.ListProductsForm.English.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>TwistMainForm.Turkish.Designer.cs</LastGenOutput>
+      <LastGenOutput>Twist.ListProductsForm.English.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Turkish\TwistProductsForm.Turkish.resx">
+    <EmbeddedResource Include="Resources\English\Twist.ListUsersForm.English.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>TwistProductsForm.Turkish.Designer.cs</LastGenOutput>
+      <LastGenOutput>Twist.ListUsersForm.English.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Turkish\TwistUsersForm.Turkish.resx">
+    <EmbeddedResource Include="Resources\Turkish\Twist.AddCableForm.Turkish.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>TwistUsersForm.Turkish.Designer.cs</LastGenOutput>
+      <LastGenOutput>Twist.AddCableForm.Turkish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Turkish\Twist.ListCablesForm.Turkish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Twist.ListCablesForm.Turkish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Turkish\Twist.MainForm.Turkish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Twist.MainForm.Turkish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Turkish\Twist.AddProductForm.Turkish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Twist.AddProductForm.Turkish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Turkish\Twist.ListProductsForm.Turkish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Twist.ListProductsForm.Turkish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Turkish\Twist.AddUserForm.Turkish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Twist.AddUserForm.Turkish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Turkish\Twist.ListUsersForm.Turkish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Twist.ListUsersForm.Turkish.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

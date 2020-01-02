@@ -22,14 +22,14 @@ namespace Twist.WinFormUI.Resources.English {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class TwistCablesForm_English {
+    internal class Twist_ListUsersForm_English {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal TwistCablesForm_English() {
+        internal Twist_ListUsersForm_English() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Twist.WinFormUI.Resources.English {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Twist.WinFormUI.Resources.English.TwistCablesForm.English", typeof(TwistCablesForm_English).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Twist.WinFormUI.Resources.English.Twist.ListUsersForm.English", typeof(Twist_ListUsersForm_English).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,15 @@ namespace Twist.WinFormUI.Resources.English {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Barcod Pin.
+        /// </summary>
+        internal static string BarcodPin {
+            get {
+                return ResourceManager.GetString("BarcodPin", resourceCulture);
             }
         }
         
@@ -79,47 +88,38 @@ namespace Twist.WinFormUI.Resources.English {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cable Name.
+        ///   Looks up a localized string similar to Level.
         /// </summary>
-        internal static string CableName {
+        internal static string Level {
             get {
-                return ResourceManager.GetString("CableName", resourceCulture);
+                return ResourceManager.GetString("Level", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cable Section.
+        ///   Looks up a localized string similar to Pin.
         /// </summary>
-        internal static string CableSection {
+        internal static string Pin {
             get {
-                return ResourceManager.GetString("CableSection", resourceCulture);
+                return ResourceManager.GetString("Pin", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Color.
+        ///   Looks up a localized string similar to Protection Info.
         /// </summary>
-        internal static string Color {
+        internal static string ProtectionInfo {
             get {
-                return ResourceManager.GetString("Color", resourceCulture);
+                return ResourceManager.GetString("ProtectionInfo", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Direction.
+        ///   Looks up a localized string similar to User Name.
         /// </summary>
-        internal static string Direction {
+        internal static string UserName {
             get {
-                return ResourceManager.GetString("Direction", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to OuterDiameter.
-        /// </summary>
-        internal static string OuterDiameter {
-            get {
-                return ResourceManager.GetString("OuterDiameter", resourceCulture);
+                return ResourceManager.GetString("UserName", resourceCulture);
             }
         }
     }
