@@ -23,6 +23,7 @@ namespace WindowsFormsApp1.Forms
         private void ListCablesForm_Load(object sender, EventArgs e)
         {
             ListCables();
+           
         }
 
         private void btn_Update_Click(object sender, EventArgs e)

@@ -30,24 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TwistMainForm));
             this.Panel_TopMenu = new System.Windows.Forms.Panel();
+            this.btn_Simge = new System.Windows.Forms.Button();
+            this.btn_X = new System.Windows.Forms.Button();
             this.combo_Languages = new System.Windows.Forms.ComboBox();
             this.label_ConnectionStatus = new System.Windows.Forms.Label();
             this.label_AccessSystem = new System.Windows.Forms.Label();
             this.label_DataRequest = new System.Windows.Forms.Label();
             this.btn_Connect = new System.Windows.Forms.Button();
             this.btn_DisConnect = new System.Windows.Forms.Button();
-            this.pictureB_MiniBtn = new System.Windows.Forms.PictureBox();
-            this.pictureB_FullScreenBtn = new System.Windows.Forms.PictureBox();
-            this.pictureB_XBtn = new System.Windows.Forms.PictureBox();
             this.Panel_LeftMenu = new System.Windows.Forms.Panel();
             this.pictureBox_EksonLogo = new System.Windows.Forms.PictureBox();
             this.btn_Users = new System.Windows.Forms.Button();
             this.btn_Cables = new System.Windows.Forms.Button();
             this.btn_Products = new System.Windows.Forms.Button();
             this.Panel_TopMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureB_MiniBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureB_FullScreenBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureB_XBtn)).BeginInit();
             this.Panel_LeftMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_EksonLogo)).BeginInit();
             this.SuspendLayout();
@@ -55,27 +51,60 @@
             // Panel_TopMenu
             // 
             this.Panel_TopMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.Panel_TopMenu.Controls.Add(this.btn_Simge);
+            this.Panel_TopMenu.Controls.Add(this.btn_X);
             this.Panel_TopMenu.Controls.Add(this.combo_Languages);
             this.Panel_TopMenu.Controls.Add(this.label_ConnectionStatus);
             this.Panel_TopMenu.Controls.Add(this.label_AccessSystem);
             this.Panel_TopMenu.Controls.Add(this.label_DataRequest);
             this.Panel_TopMenu.Controls.Add(this.btn_Connect);
             this.Panel_TopMenu.Controls.Add(this.btn_DisConnect);
-            this.Panel_TopMenu.Controls.Add(this.pictureB_MiniBtn);
-            this.Panel_TopMenu.Controls.Add(this.pictureB_FullScreenBtn);
-            this.Panel_TopMenu.Controls.Add(this.pictureB_XBtn);
             this.Panel_TopMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_TopMenu.Location = new System.Drawing.Point(0, 0);
             this.Panel_TopMenu.Name = "Panel_TopMenu";
-            this.Panel_TopMenu.Size = new System.Drawing.Size(807, 60);
+            this.Panel_TopMenu.Size = new System.Drawing.Size(807, 75);
             this.Panel_TopMenu.TabIndex = 0;
+            // 
+            // btn_Simge
+            // 
+            this.btn_Simge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Simge.FlatAppearance.BorderSize = 0;
+            this.btn_Simge.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
+            this.btn_Simge.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(180)))));
+            this.btn_Simge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Simge.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Simge.ForeColor = System.Drawing.Color.White;
+            this.btn_Simge.Location = new System.Drawing.Point(738, 0);
+            this.btn_Simge.Name = "btn_Simge";
+            this.btn_Simge.Size = new System.Drawing.Size(30, 25);
+            this.btn_Simge.TabIndex = 3;
+            this.btn_Simge.Text = "__";
+            this.btn_Simge.UseVisualStyleBackColor = true;
+            this.btn_Simge.Click += new System.EventHandler(this.btn_Simge_Click);
+            // 
+            // btn_X
+            // 
+            this.btn_X.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_X.FlatAppearance.BorderSize = 0;
+            this.btn_X.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_X.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_X.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_X.ForeColor = System.Drawing.Color.White;
+            this.btn_X.Location = new System.Drawing.Point(774, 0);
+            this.btn_X.Name = "btn_X";
+            this.btn_X.Size = new System.Drawing.Size(30, 25);
+            this.btn_X.TabIndex = 3;
+            this.btn_X.Text = "X";
+            this.btn_X.UseVisualStyleBackColor = true;
+            this.btn_X.Click += new System.EventHandler(this.btn_X_Click);
             // 
             // combo_Languages
             // 
+            this.combo_Languages.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.combo_Languages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.combo_Languages.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.combo_Languages.FormattingEnabled = true;
-            this.combo_Languages.Location = new System.Drawing.Point(665, 30);
+            this.combo_Languages.Location = new System.Drawing.Point(676, 45);
             this.combo_Languages.Name = "combo_Languages";
             this.combo_Languages.Size = new System.Drawing.Size(131, 23);
             this.combo_Languages.TabIndex = 5;
@@ -148,39 +177,6 @@
             this.btn_DisConnect.UseVisualStyleBackColor = false;
             this.btn_DisConnect.Click += new System.EventHandler(this.btn_DisConnect_Click);
             // 
-            // pictureB_MiniBtn
-            // 
-            this.pictureB_MiniBtn.Image = ((System.Drawing.Image)(resources.GetObject("pictureB_MiniBtn.Image")));
-            this.pictureB_MiniBtn.Location = new System.Drawing.Point(734, 3);
-            this.pictureB_MiniBtn.Name = "pictureB_MiniBtn";
-            this.pictureB_MiniBtn.Size = new System.Drawing.Size(14, 14);
-            this.pictureB_MiniBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureB_MiniBtn.TabIndex = 2;
-            this.pictureB_MiniBtn.TabStop = false;
-            this.pictureB_MiniBtn.Click += new System.EventHandler(this.pictureB_MiniBtn_Click);
-            // 
-            // pictureB_FullScreenBtn
-            // 
-            this.pictureB_FullScreenBtn.Image = ((System.Drawing.Image)(resources.GetObject("pictureB_FullScreenBtn.Image")));
-            this.pictureB_FullScreenBtn.Location = new System.Drawing.Point(754, 3);
-            this.pictureB_FullScreenBtn.Name = "pictureB_FullScreenBtn";
-            this.pictureB_FullScreenBtn.Size = new System.Drawing.Size(14, 14);
-            this.pictureB_FullScreenBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureB_FullScreenBtn.TabIndex = 2;
-            this.pictureB_FullScreenBtn.TabStop = false;
-            this.pictureB_FullScreenBtn.Click += new System.EventHandler(this.pictureB_FullScreenBtn_Click);
-            // 
-            // pictureB_XBtn
-            // 
-            this.pictureB_XBtn.Image = ((System.Drawing.Image)(resources.GetObject("pictureB_XBtn.Image")));
-            this.pictureB_XBtn.Location = new System.Drawing.Point(774, 3);
-            this.pictureB_XBtn.Name = "pictureB_XBtn";
-            this.pictureB_XBtn.Size = new System.Drawing.Size(14, 14);
-            this.pictureB_XBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureB_XBtn.TabIndex = 2;
-            this.pictureB_XBtn.TabStop = false;
-            this.pictureB_XBtn.Click += new System.EventHandler(this.pictureB_XBtn_Click);
-            // 
             // Panel_LeftMenu
             // 
             this.Panel_LeftMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
@@ -189,15 +185,16 @@
             this.Panel_LeftMenu.Controls.Add(this.btn_Cables);
             this.Panel_LeftMenu.Controls.Add(this.btn_Products);
             this.Panel_LeftMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Panel_LeftMenu.Location = new System.Drawing.Point(0, 60);
+            this.Panel_LeftMenu.Location = new System.Drawing.Point(0, 75);
             this.Panel_LeftMenu.Name = "Panel_LeftMenu";
-            this.Panel_LeftMenu.Size = new System.Drawing.Size(133, 468);
+            this.Panel_LeftMenu.Size = new System.Drawing.Size(133, 460);
             this.Panel_LeftMenu.TabIndex = 1;
             // 
             // pictureBox_EksonLogo
             // 
+            this.pictureBox_EksonLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox_EksonLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_EksonLogo.Image")));
-            this.pictureBox_EksonLogo.Location = new System.Drawing.Point(0, 425);
+            this.pictureBox_EksonLogo.Location = new System.Drawing.Point(0, 380);
             this.pictureBox_EksonLogo.Name = "pictureBox_EksonLogo";
             this.pictureBox_EksonLogo.Size = new System.Drawing.Size(133, 31);
             this.pictureBox_EksonLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -252,8 +249,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
-            this.ClientSize = new System.Drawing.Size(807, 528);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(807, 535);
             this.Controls.Add(this.Panel_LeftMenu);
             this.Controls.Add(this.Panel_TopMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -264,9 +261,6 @@
             this.Load += new System.EventHandler(this.TwistMainForm_Load);
             this.Panel_TopMenu.ResumeLayout(false);
             this.Panel_TopMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureB_MiniBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureB_FullScreenBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureB_XBtn)).EndInit();
             this.Panel_LeftMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_EksonLogo)).EndInit();
             this.ResumeLayout(false);
@@ -276,10 +270,7 @@
         #endregion
 
         private System.Windows.Forms.Panel Panel_TopMenu;
-        private System.Windows.Forms.PictureBox pictureB_FullScreenBtn;
-        private System.Windows.Forms.PictureBox pictureB_XBtn;
         private System.Windows.Forms.Panel Panel_LeftMenu;
-        private System.Windows.Forms.PictureBox pictureB_MiniBtn;
         private System.Windows.Forms.Label label_ConnectionStatus;
         private System.Windows.Forms.Label label_AccessSystem;
         private System.Windows.Forms.Label label_DataRequest;
@@ -290,5 +281,7 @@
         private System.Windows.Forms.Button btn_Products;
         private System.Windows.Forms.ComboBox combo_Languages;
         private System.Windows.Forms.PictureBox pictureBox_EksonLogo;
+        private System.Windows.Forms.Button btn_X;
+        private System.Windows.Forms.Button btn_Simge;
     }
 }

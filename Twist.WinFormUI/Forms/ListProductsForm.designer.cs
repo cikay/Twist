@@ -58,9 +58,10 @@
             this.CableDirection});
             this.listView_Products.ContextMenuStrip = this.cms_ProductDetails;
             this.listView_Products.HideSelection = false;
-            this.listView_Products.Location = new System.Drawing.Point(30, 30);
+            this.listView_Products.Location = new System.Drawing.Point(40, 40);
+            this.listView_Products.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.listView_Products.Name = "listView_Products";
-            this.listView_Products.Size = new System.Drawing.Size(734, 452);
+            this.listView_Products.Size = new System.Drawing.Size(914, 441);
             this.listView_Products.TabIndex = 39;
             this.listView_Products.UseCompatibleStateImageBehavior = false;
             this.listView_Products.View = System.Windows.Forms.View.Details;
@@ -131,35 +132,55 @@
             // 
             // btn_Update
             // 
+            this.btn_Update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.btn_Update.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(50)))), ((int)(((byte)(255)))));
+            this.btn_Update.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
+            this.btn_Update.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
             this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Update.Location = new System.Drawing.Point(986, 12);
+            this.btn_Update.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Update.ForeColor = System.Drawing.Color.White;
+            this.btn_Update.Location = new System.Drawing.Point(995, 40);
+            this.btn_Update.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(60, 35);
+            this.btn_Update.Size = new System.Drawing.Size(90, 35);
             this.btn_Update.TabIndex = 40;
             this.btn_Update.Text = "Güncelle";
-            this.btn_Update.UseVisualStyleBackColor = true;
+            this.btn_Update.UseVisualStyleBackColor = false;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // btn_Add
             // 
+            this.btn_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.btn_Add.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(50)))), ((int)(((byte)(255)))));
+            this.btn_Add.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(190)))), ((int)(((byte)(255)))));
+            this.btn_Add.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Add.Location = new System.Drawing.Point(1052, 12);
+            this.btn_Add.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Add.ForeColor = System.Drawing.Color.White;
+            this.btn_Add.Location = new System.Drawing.Point(1090, 40);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(60, 35);
             this.btn_Add.TabIndex = 40;
             this.btn_Add.Text = "Ekle";
-            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.UseVisualStyleBackColor = false;
             this.btn_Add.Click += new System.EventHandler(this.btn_AddProduct_Click);
             // 
             // ListProductsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1144, 547);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1190, 516);
             this.ControlBox = false;
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.listView_Products);
+            this.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "ListProductsForm";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.ListProductForm_Load);

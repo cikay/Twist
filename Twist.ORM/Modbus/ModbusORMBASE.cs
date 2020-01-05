@@ -114,7 +114,7 @@ namespace Twist.ORM
         {
             if (modbusClient.Connected) return false;
             PropertyInfo[] Properties = typeof(T).GetProperties();
-
+            
             foreach (var prop in Properties)
             {
 

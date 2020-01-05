@@ -9,6 +9,7 @@ using System.Collections;
 using WindowsFormsApp1.Forms;
 using EasyModbus;
 using Twist.WinFormUI.Classes;
+using System.Linq;
 
 namespace Twist.WinFormUI.Forms
 {
@@ -18,6 +19,7 @@ namespace Twist.WinFormUI.Forms
         List<Language> languages = new List<Language>();
         Form ChildForm = null;
         ModbusClient modbusClient;
+        
 
         public TwistMainForm()
         {
@@ -30,29 +32,14 @@ namespace Twist.WinFormUI.Forms
        
         private void TwistMainForm_Load(object sender, EventArgs e)
         {
-            NewLocation();
+          
             combo_Languages.Text = "Change Language";
             LanguagesList languageList = new LanguagesList();
             foreach(Language language in languageList)
             {
                 combo_Languages.Items.Add(language);
             }
-        }
-
-        private void pictureB_MiniBtn_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void pictureB_FullScreenBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureB_XBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            Controls.OfType<MdiClient>().FirstOrDefault().BackColor = Color.White;
         }
 
         private void btn_DisConnect_Click(object sender, EventArgs e)
@@ -82,7 +69,7 @@ namespace Twist.WinFormUI.Forms
         {
             ShowForm<ListUsersForm>();
         }
-
+        
         private void ShowForm<T>() where T: Form
         {
           
@@ -101,10 +88,14 @@ namespace Twist.WinFormUI.Forms
                 ChildForm.Show();
                 ActiveForms.Add(typeof(T), ChildForm);
             }
-            ChildForm.SetBounds(0, 0, this.Width, this.Height);
+            
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
+            ChildForm.Dock = DockStyle.Fill;
             SetLanguage.SetChildFormLanguage(ChildForm, combo_Languages);
-            //Language language = (Language)combo_Languages.SelectedItem;
+            ChildFormControls controls = new ChildFormControls();
+           
 
+            DesignUI.ChildFormButtonsDesign(ChildForm);
         }
 
         private void form_FormClosed(object sender, FormClosedEventArgs e)
@@ -114,11 +105,8 @@ namespace Twist.WinFormUI.Forms
         private void combo_Languages_SelectedIndexChanged(object sender, EventArgs e)
         {
             Language language = (Language)combo_Languages.SelectedItem;
-
             SetMainFormLanguage(language.TwistMainForm.Path);
             SetLanguage.SetChildFormLanguage(ChildForm, combo_Languages);
-           
-            
         }
 
         private void SetMainFormLanguage(string resourcePath)
@@ -143,15 +131,13 @@ namespace Twist.WinFormUI.Forms
             }
         }
 
-        private void NewLocation()
-        {
-            pictureB_XBtn.Location = new Point(this.Width - (pictureB_XBtn.Width + 10), 5);
-            pictureB_FullScreenBtn.Location = new Point(pictureB_XBtn.Location.X - (pictureB_FullScreenBtn.Width + 5), 5);
-            pictureB_MiniBtn.Location = new Point(pictureB_FullScreenBtn.Location.X - (pictureB_MiniBtn.Width + 5), 5);
-            combo_Languages.Location = new Point(this.Width - (combo_Languages.Width + 10), 30);
-
-            pictureBox_EksonLogo.Location = new Point(0, Panel_LeftMenu.Height - pictureBox_EksonLogo.Height - 5);
-        }
+        //private void NewLocation()
+        //{
+        //    btn_X.Location = new Point(this.Width - (btn_X.Width + 10), 0);
+        //    btn_Simge.Location = new Point(btn_X.Location.X - (btn_Simge.Width + 5), 0);
+        //    combo_Languages.Location = new Point(this.Width - (combo_Languages.Width + 10), 45);
+        //    pictureBox_EksonLogo.Location = new Point(0, Panel_LeftMenu.Height - pictureBox_EksonLogo.Height - 5);
+        //}
 
         private void pictureBox_EksonLogo_Click(object sender, EventArgs e)
         {
@@ -163,6 +149,19 @@ namespace Twist.WinFormUI.Forms
         {
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(pictureBox_EksonLogo, "www.ekson.com.tr");    
-        }       
+        }
+
+       
+        private void btn_X_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_Simge_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        
     }
 }

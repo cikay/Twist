@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ChildFormControls.cs" />
     <Compile Include="Classes\DesignUI.cs" />
     <Compile Include="Classes\ListData.cs" />
     <Compile Include="Classes\SetLanguage.cs" />

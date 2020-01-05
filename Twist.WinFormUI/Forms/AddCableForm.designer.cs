@@ -31,7 +31,7 @@
             this.lb_CableName = new System.Windows.Forms.Label();
             this.lb_CableSection = new System.Windows.Forms.Label();
             this.lb_CableDirection = new System.Windows.Forms.Label();
-            this.lb_OuterDiameter = new System.Windows.Forms.Label();
+            this.lb_CableOuterDiameter = new System.Windows.Forms.Label();
             this.lb_CableColor = new System.Windows.Forms.Label();
             this.txt_CableName = new System.Windows.Forms.TextBox();
             this.txt_CableSection = new System.Windows.Forms.TextBox();
@@ -44,7 +44,7 @@
             // lb_CableName
             // 
             this.lb_CableName.AutoSize = true;
-            this.lb_CableName.Location = new System.Drawing.Point(45, 45);
+            this.lb_CableName.Location = new System.Drawing.Point(76, 44);
             this.lb_CableName.Name = "lb_CableName";
             this.lb_CableName.Size = new System.Drawing.Size(55, 13);
             this.lb_CableName.TabIndex = 0;
@@ -53,7 +53,7 @@
             // lb_CableSection
             // 
             this.lb_CableSection.AutoSize = true;
-            this.lb_CableSection.Location = new System.Drawing.Point(65, 74);
+            this.lb_CableSection.Location = new System.Drawing.Point(96, 73);
             this.lb_CableSection.Name = "lb_CableSection";
             this.lb_CableSection.Size = new System.Drawing.Size(35, 13);
             this.lb_CableSection.TabIndex = 0;
@@ -62,25 +62,25 @@
             // lb_CableDirection
             // 
             this.lb_CableDirection.AutoSize = true;
-            this.lb_CableDirection.Location = new System.Drawing.Point(71, 126);
+            this.lb_CableDirection.Location = new System.Drawing.Point(102, 125);
             this.lb_CableDirection.Name = "lb_CableDirection";
             this.lb_CableDirection.Size = new System.Drawing.Size(29, 13);
             this.lb_CableDirection.TabIndex = 0;
             this.lb_CableDirection.Text = "Yön:";
             // 
-            // lb_OuterDiameter
+            // lb_CableOuterDiameter
             // 
-            this.lb_OuterDiameter.AutoSize = true;
-            this.lb_OuterDiameter.Location = new System.Drawing.Point(53, 104);
-            this.lb_OuterDiameter.Name = "lb_OuterDiameter";
-            this.lb_OuterDiameter.Size = new System.Drawing.Size(47, 13);
-            this.lb_OuterDiameter.TabIndex = 0;
-            this.lb_OuterDiameter.Text = "Dış Çap:";
+            this.lb_CableOuterDiameter.AutoSize = true;
+            this.lb_CableOuterDiameter.Location = new System.Drawing.Point(84, 103);
+            this.lb_CableOuterDiameter.Name = "lb_CableOuterDiameter";
+            this.lb_CableOuterDiameter.Size = new System.Drawing.Size(47, 13);
+            this.lb_CableOuterDiameter.TabIndex = 0;
+            this.lb_CableOuterDiameter.Text = "Dış Çap:";
             // 
             // lb_CableColor
             // 
             this.lb_CableColor.AutoSize = true;
-            this.lb_CableColor.Location = new System.Drawing.Point(64, 149);
+            this.lb_CableColor.Location = new System.Drawing.Point(95, 148);
             this.lb_CableColor.Name = "lb_CableColor";
             this.lb_CableColor.Size = new System.Drawing.Size(36, 13);
             this.lb_CableColor.TabIndex = 0;
@@ -88,35 +88,35 @@
             // 
             // txt_CableName
             // 
-            this.txt_CableName.Location = new System.Drawing.Point(106, 42);
+            this.txt_CableName.Location = new System.Drawing.Point(137, 41);
             this.txt_CableName.Name = "txt_CableName";
             this.txt_CableName.Size = new System.Drawing.Size(100, 20);
             this.txt_CableName.TabIndex = 1;
             // 
             // txt_CableSection
             // 
-            this.txt_CableSection.Location = new System.Drawing.Point(106, 71);
+            this.txt_CableSection.Location = new System.Drawing.Point(137, 70);
             this.txt_CableSection.Name = "txt_CableSection";
             this.txt_CableSection.Size = new System.Drawing.Size(100, 20);
             this.txt_CableSection.TabIndex = 1;
             // 
             // txt_OuterDiameter
             // 
-            this.txt_OuterDiameter.Location = new System.Drawing.Point(106, 97);
+            this.txt_OuterDiameter.Location = new System.Drawing.Point(137, 96);
             this.txt_OuterDiameter.Name = "txt_OuterDiameter";
             this.txt_OuterDiameter.Size = new System.Drawing.Size(100, 20);
             this.txt_OuterDiameter.TabIndex = 1;
             // 
             // txt_Direction
             // 
-            this.txt_Direction.Location = new System.Drawing.Point(106, 123);
+            this.txt_Direction.Location = new System.Drawing.Point(137, 122);
             this.txt_Direction.Name = "txt_Direction";
             this.txt_Direction.Size = new System.Drawing.Size(100, 20);
             this.txt_Direction.TabIndex = 1;
             // 
             // txt_Color
             // 
-            this.txt_Color.Location = new System.Drawing.Point(106, 149);
+            this.txt_Color.Location = new System.Drawing.Point(137, 148);
             this.txt_Color.Name = "txt_Color";
             this.txt_Color.Size = new System.Drawing.Size(100, 20);
             this.txt_Color.TabIndex = 1;
@@ -124,7 +124,7 @@
             // btn_Add
             // 
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Add.Location = new System.Drawing.Point(106, 188);
+            this.btn_Add.Location = new System.Drawing.Point(137, 187);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(75, 29);
             this.btn_Add.TabIndex = 2;
@@ -136,14 +136,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 272);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(358, 262);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.txt_Color);
             this.Controls.Add(this.txt_Direction);
             this.Controls.Add(this.txt_OuterDiameter);
             this.Controls.Add(this.txt_CableSection);
             this.Controls.Add(this.txt_CableName);
-            this.Controls.Add(this.lb_OuterDiameter);
+            this.Controls.Add(this.lb_CableOuterDiameter);
             this.Controls.Add(this.lb_CableColor);
             this.Controls.Add(this.lb_CableDirection);
             this.Controls.Add(this.lb_CableSection);
@@ -161,7 +162,7 @@
         private System.Windows.Forms.Label lb_CableName;
         private System.Windows.Forms.Label lb_CableSection;
         private System.Windows.Forms.Label lb_CableDirection;
-        private System.Windows.Forms.Label lb_OuterDiameter;
+        private System.Windows.Forms.Label lb_CableOuterDiameter;
         private System.Windows.Forms.Label lb_CableColor;
         private System.Windows.Forms.TextBox txt_CableName;
         private System.Windows.Forms.TextBox txt_CableSection;
