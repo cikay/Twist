@@ -37,3 +37,4 @@ E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources.Turkish.Twist.AddUserForm.Turkish.resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources.Turkish.Twist.ListUsersForm.Turkish.resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.Forms.AddUserForm.resources
+E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Forms.ProductDetailsForm2.resources

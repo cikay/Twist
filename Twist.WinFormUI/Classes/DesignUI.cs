@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,7 @@ namespace Twist.WinFormUI.Classes
     {
         public static void ChildFormButtonsDesign(Form form)
         {
-            int Left=0, Top = 40, Height = 35, Width=0;
-
+            
             foreach(Control ctrl in form.Controls)
             {
                 if(ctrl is Button)
@@ -24,22 +24,135 @@ namespace Twist.WinFormUI.Classes
                     button.FlatAppearance.MouseOverBackColor = Color.FromArgb(3, 150, 255);
                     button.FlatAppearance.BorderColor = Color.FromArgb(3, 50, 255);
 
-                    //switch (button.Name)
-                    //{
-                    //    case ("btn_Add"):
-                    //        Left = 40; Width = 60;
-                    //        break;
-                    //    case ("btn_Update"):
-                    //        Left = 105; Width = 90;
-                    //        break;
-                    //}
-                    //button.Location = new Point(form.Width - Left, Top);
-                    //button.Size = new Size(Width, Height);
- 
                 }
 
             }
         }
-        
+
+       
+        public void OverlapImages(PictureBox picImage, WiresColor wiresColor)
+        {
+           
+            try
+            {
+                Bitmap WireBitmap = new Bitmap("E:/Yazılım projeleri/Twist/hmi/ikonlar/kablolar/siyah_a_kablo.png"); //Wire image
+                picImage.Image = WireBitmap;
+                picImage.BackColor = Color.Transparent;
+                WireBitmap = ReplaceColor(WireBitmap, Color.Green);
+                picImage.Visible = true;
+
+                if (wiresColor.Wire1.LineColor != null)
+                {
+                    Bitmap WireLineBitmap = new Bitmap("E:/Yazılım projeleri/Twist/hmi/ikonlar/kablolar/beyaz_a_cizgi.png");
+                    WireLineBitmap = ReplaceColor(WireLineBitmap, wiresColor.Wire1.LineColor);
+
+                    if (WireLineBitmap != null && WireBitmap != null)
+                    {
+                        int wire1linePosY = WireBitmap.Height / 2 - WireLineBitmap.Height / 2;
+
+                        using (Graphics gr = Graphics.FromImage(WireBitmap))
+                        {
+                            gr.DrawImage(WireLineBitmap, 50, wire1linePosY, picImage.Width - 100, WireLineBitmap.Height);
+                        }
+                    }
+                }
+
+                Bitmap CombinedWiresBitmap = new Bitmap(WireBitmap); //current CombinedWiresBitmap image
+
+                Bitmap Wire2Bitmap = new Bitmap("E:/Yazılım projeleri/Twist/hmi/ikonlar/kablolar/siyah_b_kablo.png"); //overlay image
+                Wire2Bitmap = ReplaceColor(Wire2Bitmap, Color.Black);
+
+                if (wiresColor.Wire2.LineColor != null)
+                {
+                    Bitmap Wire2LineBitmap = new Bitmap("E:/Yazılım projeleri/Twist/hmi/ikonlar/kablolar/beyaz_b_cizgi.png");
+                    Wire2LineBitmap = ReplaceColor(Wire2LineBitmap, wiresColor.Wire2.LineColor);
+                    if (Wire2LineBitmap != null && Wire2Bitmap != null)
+                    {
+                        int wire2linePosY = Wire2Bitmap.Height / 2 - Wire2LineBitmap.Height / 2;
+                        using (Graphics gr = Graphics.FromImage(Wire2Bitmap))
+                        {
+
+                            gr.DrawImage(Wire2LineBitmap, 50, wire2linePosY, picImage.Width - 100, Wire2LineBitmap.Height);
+
+                        }
+                    }
+                }
+
+                if (Wire2Bitmap != null)
+                {
+                    using (Graphics gr = Graphics.FromImage(CombinedWiresBitmap))
+                    {
+                        gr.DrawImage(Wire2Bitmap, 0, 0, picImage.Width, picImage.Height);
+                    }
+                }
+
+                picImage.Image = CombinedWiresBitmap;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error opening file.\n" + ex.Message,
+                    "Open Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        internal void DrawWire(PictureBox pictureBox1, byte WireCount)
+        {
+            Graphics g = Graphics.FromImage(pictureBox1.Image);
+
+
+            Pen pen = new Pen(Brushes.Yellow, 7.0F);
+
+            float x1 = 0;
+            float y1 = 0;
+            float y2 = 0;
+            float yEx = 50; //spacing from the top
+            float eF = 35; //size multipler 
+            const int width = 100;
+
+
+            for (float x = 0; x < width; x += 0.0005F)// 0.1f is more precise
+            {
+                y2 = (float)Math.Sin(x);
+
+                float a = x1 * eF;
+                float b = y1 * eF + yEx;
+                float c = x * eF;
+                float d = y2 * eF + yEx;
+
+                g.DrawLine(pen, a, b, c, d);
+
+                x1 = x;
+                y1 = y2;
+
+            }
+
+            //g.DrawImage(pictureBox1.Image, new Point(0, 0));
+        }
+
+        public Bitmap ReplaceColor(Image _image, Color _colorNew)
+        {
+            Bitmap bmap = (Bitmap)_image.Clone();
+
+            Color c;
+
+            for (int x = 0; x < bmap.Width; x++)
+            {
+                for (int y = 0; y < bmap.Height; y++)
+                {
+                    c = bmap.GetPixel(x, y);
+
+                    //Determinig Color Match
+                    string a = c.ToString();
+                    if (c.ToArgb().CompareTo(Color.FromArgb(0,0,0,0))==0)
+                    {
+                        if (_colorNew == Color.Transparent) bmap.SetPixel(x, y, Color.FromArgb(0, _colorNew.R, _colorNew.G, _colorNew.B));
+                        else bmap.SetPixel(x, y, Color.FromArgb(c.A, _colorNew.R, _colorNew.G, _colorNew.B));
+                    }
+                    
+                }
+            }
+            return (Bitmap)bmap.Clone();
+        }
+
     }
 }

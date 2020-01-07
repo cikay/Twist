@@ -16,7 +16,7 @@ namespace Twist.WinFormUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.TwistMainForm());
+            Application.Run(new Forms.ProductDetailsForm2());
         }
     }
 }

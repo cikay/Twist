@@ -26,6 +26,7 @@ namespace WindowsFormsApp1.Forms
         private void ListProductForm_Load(object sender, EventArgs e)
         {
             ListProducts();
+            
            
         }
 
