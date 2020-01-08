@@ -28,34 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductDetailsForm2));
             this.ofdFile = new System.Windows.Forms.OpenFileDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox_Cable = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cable)).BeginInit();
             this.SuspendLayout();
             // 
             // ofdFile
             // 
             this.ofdFile.FileName = "ofdFile";
             // 
-            // pictureBox1
+            // pictureBox_Cable
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(95, 65);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(591, 103);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox_Cable.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Cable.BackgroundImage")));
+            this.pictureBox_Cable.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Cable.Image")));
+            this.pictureBox_Cable.Location = new System.Drawing.Point(67, 13);
+            this.pictureBox_Cable.Name = "pictureBox_Cable";
+            this.pictureBox_Cable.Size = new System.Drawing.Size(638, 403);
+            this.pictureBox_Cable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox_Cable.TabIndex = 0;
+            this.pictureBox_Cable.TabStop = false;
+            this.pictureBox_Cable.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Cable_Paint);
             // 
             // ProductDetailsForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(800, 448);
+            this.Controls.Add(this.pictureBox_Cable);
             this.Name = "ProductDetailsForm2";
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.Text = "ProductDetailsForm2";
             this.Load += new System.EventHandler(this.ProductDetailsForm2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -63,6 +68,6 @@
 
         #endregion
         private System.Windows.Forms.OpenFileDialog ofdFile;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox_Cable;
     }
 }

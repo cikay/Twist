@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,8 +36,10 @@ namespace Twist.WinFormUI.Classes
            
             try
             {
+                
                 Bitmap WireBitmap = new Bitmap("E:/Yazılım projeleri/Twist/hmi/ikonlar/kablolar/siyah_a_kablo.png"); //Wire image
                 picImage.Image = WireBitmap;
+
                 picImage.BackColor = Color.Transparent;
                 WireBitmap = ReplaceColor(WireBitmap, Color.Green);
                 picImage.Visible = true;
@@ -53,11 +56,14 @@ namespace Twist.WinFormUI.Classes
                         using (Graphics gr = Graphics.FromImage(WireBitmap))
                         {
                             gr.DrawImage(WireLineBitmap, 50, wire1linePosY, picImage.Width - 100, WireLineBitmap.Height);
+                            
                         }
                     }
                 }
 
+
                 Bitmap CombinedWiresBitmap = new Bitmap(WireBitmap); //current CombinedWiresBitmap image
+
 
                 Bitmap Wire2Bitmap = new Bitmap("E:/Yazılım projeleri/Twist/hmi/ikonlar/kablolar/siyah_b_kablo.png"); //overlay image
                 Wire2Bitmap = ReplaceColor(Wire2Bitmap, Color.Black);
@@ -86,7 +92,16 @@ namespace Twist.WinFormUI.Classes
                     }
                 }
 
+
+                //picImage.SizeMode = PictureBoxSizeMode.Normal;
+
                 picImage.Image = CombinedWiresBitmap;
+                picImage.Padding = new Padding(10, 10, 10, 0);
+                picImage.Height = 300;
+                
+
+
+                //DrawArrow(picImage.Image);
             }
             catch (Exception ex)
             {
@@ -95,10 +110,10 @@ namespace Twist.WinFormUI.Classes
             }
         }
 
+
         internal void DrawWire(PictureBox pictureBox1, byte WireCount)
         {
             Graphics g = Graphics.FromImage(pictureBox1.Image);
-
 
             Pen pen = new Pen(Brushes.Yellow, 7.0F);
 
@@ -143,16 +158,38 @@ namespace Twist.WinFormUI.Classes
 
                     //Determinig Color Match
                     string a = c.ToString();
-                    if (c.ToArgb().CompareTo(Color.FromArgb(0,0,0,0))==0)
-                    {
-                        if (_colorNew == Color.Transparent) bmap.SetPixel(x, y, Color.FromArgb(0, _colorNew.R, _colorNew.G, _colorNew.B));
-                        else bmap.SetPixel(x, y, Color.FromArgb(c.A, _colorNew.R, _colorNew.G, _colorNew.B));
-                    }
-                    
+                    //if (c.ToArgb().CompareTo(Color.FromArgb(0,0,0,0))==0)
+                    //{
+                       
+                    //}
+
+                    if (_colorNew == Color.Transparent) bmap.SetPixel(x, y, Color.FromArgb(0, _colorNew.R, _colorNew.G, _colorNew.B));
+                    else bmap.SetPixel(x, y, Color.FromArgb(c.A, _colorNew.R, _colorNew.G, _colorNew.B));
+
                 }
             }
             return (Bitmap)bmap.Clone();
         }
 
+        public Image DrawArrow(Image image)
+        {
+            using (Pen arrowPen = new Pen(Brushes.Black))
+            {
+                using (AdjustableArrowCap arrowCap = new AdjustableArrowCap(2, 2))
+                {
+                    Graphics g = Graphics.FromImage(image);
+                    arrowCap.WidthScale = 5;
+                    arrowCap.BaseCap = LineCap.Square;
+                    arrowCap.Height = 2;
+                    arrowPen.CustomEndCap = arrowCap;
+                    g.DrawLine(arrowPen, new Point(115, 33), new Point(115, 120));
+
+                }
+            }
+
+            return image;
+        }
+
+     
     }
 }

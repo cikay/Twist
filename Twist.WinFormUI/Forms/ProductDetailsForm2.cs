@@ -18,9 +18,19 @@ namespace Twist.WinFormUI.Forms
             wiresColor.Wire1 = new Wire() { color = Color.Yellow, LineColor = Color.Red };
             wiresColor.Wire2 = new Wire() { color = Color.Black, LineColor = Color.White };
             DesignUI designUI = new DesignUI();
-            designUI.OverlapImages(pictureBox1, wiresColor);
-
+            
+            designUI.OverlapImages(pictureBox_Cable, wiresColor);
+           
+            pictureBox_Cable.BackgroundImage = designUI.DrawArrow(pictureBox_Cable.BackgroundImage);
+            
         }
 
+
+        private void pictureBox_Cable_Paint(object sender, PaintEventArgs e)
+        {
+            
+
+            
+        }
     }
 }
