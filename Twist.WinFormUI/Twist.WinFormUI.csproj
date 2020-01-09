@@ -54,6 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Line.cs" />
+    <Compile Include="Classes\Lines.cs" />
+    <Compile Include="Classes\TwistingCable.cs" />
     <Compile Include="Classes\ChildFormControls.cs" />
     <Compile Include="Classes\DesignUI.cs" />
     <Compile Include="Classes\ListData.cs" />
@@ -193,6 +196,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Twist.ListUsersForm.Turkish.resx</DependentUpon>
     </Compile>
+    <Compile Include="Struct\LinePoint.cs" />
     <EmbeddedResource Include="Forms\AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
     </EmbeddedResource>

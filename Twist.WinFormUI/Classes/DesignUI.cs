@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -93,14 +94,10 @@ namespace Twist.WinFormUI.Classes
                 }
 
 
-                //picImage.SizeMode = PictureBoxSizeMode.Normal;
-
                 picImage.Image = CombinedWiresBitmap;
                 picImage.Padding = new Padding(10, 10, 10, 0);
                 picImage.Height = 300;
                 
-
-
                 //DrawArrow(picImage.Image);
             }
             catch (Exception ex)
@@ -171,21 +168,54 @@ namespace Twist.WinFormUI.Classes
             return (Bitmap)bmap.Clone();
         }
 
-        public Image DrawArrow(Image image)
+        public Image DrawArrow(Image image, TwistingCable twistingCable)
         {
-            using (Pen arrowPen = new Pen(Brushes.Black))
+           
+
+            foreach (Lines lines in twistingCable)
             {
-                using (AdjustableArrowCap arrowCap = new AdjustableArrowCap(2, 2))
+
+                if (string.Equals(lines.Left.ToString(), "LeftOpenLength"))
+                {
+                    int a = lines.Left.EndPoint.X;
+                }
+
+                using (Pen LeftLinePen = new Pen(Brushes.Black))
                 {
                     Graphics g = Graphics.FromImage(image);
-                    arrowCap.WidthScale = 5;
-                    arrowCap.BaseCap = LineCap.Square;
-                    arrowCap.Height = 2;
-                    arrowPen.CustomEndCap = arrowCap;
-                    g.DrawLine(arrowPen, new Point(115, 33), new Point(115, 120));
+                    g.DrawLine(LeftLinePen, new Point(lines.Left.Origin.X, lines.Left.Origin.Y), new Point(lines.Left.EndPoint.X, lines.Left.EndPoint.Y));
+                }
+
+                using (Pen RightLinePen = new Pen(Brushes.Black))
+                {
+                    Graphics g = Graphics.FromImage(image);
+                    g.DrawLine(RightLinePen, new Point(lines.Right.Origin.X, lines.Right.Origin.Y), new Point(lines.Right.EndPoint.X, lines.Right.EndPoint.Y));
 
                 }
+
+                
+                Point ArrowOrigin = new Point(lines.Left.EndPoint.X, lines.Left.EndPoint.Y + 5);
+                Point ArrowEndPoint = new Point(lines.Right.EndPoint.X, lines.Right.EndPoint.Y + 5);
+                using (Pen arrowPen = new Pen(Brushes.Black))
+                {
+                    
+                    using (AdjustableArrowCap arrowCap = new AdjustableArrowCap(2, 2))
+                    {
+                        Graphics g = Graphics.FromImage(image);
+                        arrowCap.WidthScale = 5;
+                        arrowCap.BaseCap = LineCap.Square;
+                        arrowCap.Height = 2;
+                        arrowPen.CustomEndCap = arrowCap;
+                        g.DrawLine(arrowPen, ArrowOrigin, ArrowEndPoint);
+
+                    }
+
+                }
+
+                
+
             }
+
 
             return image;
         }
