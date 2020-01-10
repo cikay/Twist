@@ -72,7 +72,6 @@ namespace Twist.WinFormUI.Forms
         
         private void ShowForm<T>() where T: Form
         {
-          
 
             if (ActiveForms.ContainsKey(typeof(T)))
             {
@@ -131,13 +130,6 @@ namespace Twist.WinFormUI.Forms
             }
         }
 
-        //private void NewLocation()
-        //{
-        //    btn_X.Location = new Point(this.Width - (btn_X.Width + 10), 0);
-        //    btn_Simge.Location = new Point(btn_X.Location.X - (btn_Simge.Width + 5), 0);
-        //    combo_Languages.Location = new Point(this.Width - (combo_Languages.Width + 10), 45);
-        //    pictureBox_EksonLogo.Location = new Point(0, Panel_LeftMenu.Height - pictureBox_EksonLogo.Height - 5);
-        //}
 
         private void pictureBox_EksonLogo_Click(object sender, EventArgs e)
         {

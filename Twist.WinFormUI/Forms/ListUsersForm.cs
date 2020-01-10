@@ -21,7 +21,6 @@ namespace WindowsFormsApp1.Forms
         {
             InitializeComponent();
 
-           
         }
 
         private void AccountsForm_Load(object sender, EventArgs e)

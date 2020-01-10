@@ -15,10 +15,10 @@ namespace Twist.WinFormUI.Classes
     {
         public static void ChildFormButtonsDesign(Form form)
         {
-            
-            foreach(Control ctrl in form.Controls)
+
+            foreach (Control ctrl in form.Controls)
             {
-                if(ctrl is Button)
+                if (ctrl is Button)
                 {
                     Button button = ctrl as Button;
                     button.BackColor = Color.FromArgb(3, 100, 255);
@@ -31,13 +31,13 @@ namespace Twist.WinFormUI.Classes
             }
         }
 
-       
+
         public void OverlapImages(PictureBox picImage, WiresColor wiresColor)
         {
-           
+
             try
             {
-                
+
                 Bitmap WireBitmap = new Bitmap("E:/Yazılım projeleri/Twist/hmi/ikonlar/kablolar/siyah_a_kablo.png"); //Wire image
                 picImage.Image = WireBitmap;
 
@@ -57,7 +57,7 @@ namespace Twist.WinFormUI.Classes
                         using (Graphics gr = Graphics.FromImage(WireBitmap))
                         {
                             gr.DrawImage(WireLineBitmap, 50, wire1linePosY, picImage.Width - 100, WireLineBitmap.Height);
-                            
+
                         }
                     }
                 }
@@ -97,7 +97,7 @@ namespace Twist.WinFormUI.Classes
                 picImage.Image = CombinedWiresBitmap;
                 picImage.Padding = new Padding(10, 10, 10, 0);
                 picImage.Height = 300;
-                
+
                 //DrawArrow(picImage.Image);
             }
             catch (Exception ex)
@@ -157,7 +157,7 @@ namespace Twist.WinFormUI.Classes
                     string a = c.ToString();
                     //if (c.ToArgb().CompareTo(Color.FromArgb(0,0,0,0))==0)
                     //{
-                       
+
                     //}
 
                     if (_colorNew == Color.Transparent) bmap.SetPixel(x, y, Color.FromArgb(0, _colorNew.R, _colorNew.G, _colorNew.B));
@@ -170,56 +170,122 @@ namespace Twist.WinFormUI.Classes
 
         public Image DrawArrow(Image image, TwistingCable twistingCable)
         {
-           
+
+            StringFormat format = new StringFormat();
+            format.LineAlignment = StringAlignment.Center;
+            format.Alignment = StringAlignment.Center;
 
             foreach (Lines lines in twistingCable)
             {
+                Point LeftEndPoint;
+                Point RightEndPoint;
 
-                if (string.Equals(lines.Left.ToString(), "LeftOpenLength"))
-                {
-                    int a = lines.Left.EndPoint.X;
-                }
+                if (string.Equals(lines.ToString(), "LeftOpenLength")) LeftEndPoint = new Point(lines.Left.EndPoint.X, 150);
+                else LeftEndPoint = lines.Left.EndPoint;
+                if (string.Equals(lines.ToString(), "RightOpenLength")) RightEndPoint = new Point(lines.Right.EndPoint.X, 150);
+                else RightEndPoint = lines.Right.EndPoint;
+             
 
-                using (Pen LeftLinePen = new Pen(Brushes.Black))
-                {
-                    Graphics g = Graphics.FromImage(image);
-                    g.DrawLine(LeftLinePen, new Point(lines.Left.Origin.X, lines.Left.Origin.Y), new Point(lines.Left.EndPoint.X, lines.Left.EndPoint.Y));
-                }
-
-                using (Pen RightLinePen = new Pen(Brushes.Black))
+                using (Pen pen = new Pen(Brushes.Black))
                 {
                     Graphics g = Graphics.FromImage(image);
-                    g.DrawLine(RightLinePen, new Point(lines.Right.Origin.X, lines.Right.Origin.Y), new Point(lines.Right.EndPoint.X, lines.Right.EndPoint.Y));
+                    g.DrawLine(pen, lines.Left.Origin, LeftEndPoint);
+                    g.DrawLine(pen, lines.Right.Origin, RightEndPoint);
 
-                }
+                    Point ArrowOrigin = new Point(lines.Left.EndPoint.X + 2, lines.Left.EndPoint.Y + 5);
+                    Point ArrowEndPoint = new Point(lines.Right.EndPoint.X - 2, lines.Right.EndPoint.Y + 5);
 
-                
-                Point ArrowOrigin = new Point(lines.Left.EndPoint.X, lines.Left.EndPoint.Y + 5);
-                Point ArrowEndPoint = new Point(lines.Right.EndPoint.X, lines.Right.EndPoint.Y + 5);
-                using (Pen arrowPen = new Pen(Brushes.Black))
-                {
-                    
-                    using (AdjustableArrowCap arrowCap = new AdjustableArrowCap(2, 2))
+                    DrawArrow(g, pen, ArrowOrigin, ArrowEndPoint, 5, EndpointStyle.Fletching, EndpointStyle.ArrowHead);
+
+                    using (Font font = new Font("Arial", 10))
                     {
-                        Graphics g = Graphics.FromImage(image);
-                        arrowCap.WidthScale = 5;
-                        arrowCap.BaseCap = LineCap.Square;
-                        arrowCap.Height = 2;
-                        arrowPen.CustomEndCap = arrowCap;
-                        g.DrawLine(arrowPen, ArrowOrigin, ArrowEndPoint);
+                        Point TextPoint = new Point((ArrowOrigin.X + ArrowEndPoint.X) / 2, ArrowOrigin.Y - 10);
+                        
+                        g.DrawString(lines.Value, font, Brushes.Black, TextPoint, format);
 
+                        TextPoint = new Point((ArrowOrigin.X + ArrowEndPoint.X) / 2, ArrowOrigin.Y + 10);
+                        g.DrawString(lines.Text, font, Brushes.Black, TextPoint, format);
                     }
+                }
+            }
 
+            using (Pen pen = new Pen(Brushes.Black))
+            {
+                Graphics g = Graphics.FromImage(image);
+                using (Font font = new Font("Arial", 10))
+                {
+                    Point TextPoint = new Point((12 + 597) / 2, 155 - 10);
+                    g.DrawString(twistingCable.CableLengthAfterTwisting.Value, font, Brushes.Black, TextPoint, format);
+                    TextPoint = new Point((12 + 597) / 2, 155 + 10);
+                    g.DrawString("Burulma Sonrası Kablo Boyu", font, Brushes.Black, TextPoint, format);
                 }
 
-                
+                PointF Origin = new PointF(12, 155);
+                PointF EndPoint = new PointF(597, 155);
+                DrawArrow(g, pen, Origin, EndPoint, 5, EndpointStyle.Fletching, EndpointStyle.ArrowHead);
 
             }
 
-
             return image;
         }
+           
 
-     
+        
+            
+       
+
+
+        private void DrawArrow(Graphics gr, Pen pen, PointF Origin, PointF EndPoint,
+            float length, EndpointStyle OriginStyle, EndpointStyle EndPointStyle)
+        {
+            // Draw the shaft.
+            gr.DrawLine(pen, Origin, EndPoint);
+
+            // Find the arrow shaft unit vector.
+            float vx = EndPoint.X - Origin.X;
+            float vy = EndPoint.Y - Origin.Y;
+            float dist = (float)Math.Sqrt(vx * vx + vy * vy);
+            vx /= dist;
+            vy /= dist;
+
+            // Draw the start.
+            if (OriginStyle == EndpointStyle.Fletching)
+            {
+                DrawArrowhead(gr, pen, Origin, -vx, -vy, length);
+            }
+
+            //Draw the end.
+            if (EndPointStyle == EndpointStyle.ArrowHead)
+            {
+                DrawArrowhead(gr, pen, EndPoint, vx, vy, length);
+            }
+
+        }
+
+        // Draw an arrowhead at the given point
+        // in the normalizede direction <nx, ny>.
+        private void DrawArrowhead(Graphics gr, Pen pen, PointF p, float nx, float ny, float length)
+        {
+            float ax = length * (-ny - nx);
+            float ay = length * (nx - ny);
+            PointF[] points =
+            {
+                new PointF(p.X + ax, p.Y + ay),
+                p,
+                new PointF(p.X - ay, p.Y + ax)
+            };
+            gr.DrawLines(pen, points);
+
+        }
+
+        // The end point style.
+        private enum EndpointStyle
+        {
+            None,
+            ArrowHead,
+            Fletching
+        }
+
+
     }
 }

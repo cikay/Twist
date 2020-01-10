@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace Twist.WinFormUI.Forms
 {
     partial class ProductDetailsForm
     {
@@ -28,423 +28,287 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductDetailsForm));
+            this.ofdFile = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox_Cable = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.gBox_ProductParameters1 = new System.Windows.Forms.GroupBox();
-            this.lb_TurArasiBekleme = new System.Windows.Forms.Label();
-            this.lb_BackDeceleration = new System.Windows.Forms.Label();
-            this.lb_BackAcceleretion = new System.Windows.Forms.Label();
-            this.lb_FowardDeceleration = new System.Windows.Forms.Label();
-            this.lb_FowardAcceleration = new System.Windows.Forms.Label();
-            this.lb_BackSpeed = new System.Windows.Forms.Label();
-            this.lb_BackCircuit = new System.Windows.Forms.Label();
-            this.lb_FowardSpeed = new System.Windows.Forms.Label();
-            this.lb_ForwardCircuit = new System.Windows.Forms.Label();
-            this.gBox_ProductParameters2 = new System.Windows.Forms.GroupBox();
-            this.lb_KabloBirakmaSuresi = new System.Windows.Forms.Label();
-            this.lb_BurulmaSonrasiBoy2 = new System.Windows.Forms.Label();
-            this.lb_BurulmaSonrasiBoy = new System.Windows.Forms.Label();
-            this.lb_SagAcikBoy = new System.Windows.Forms.Label();
-            this.lb_SolAcikBoy = new System.Windows.Forms.Label();
-            this.lb_PitchDimension = new System.Windows.Forms.Label();
-            this.lb_ProductName = new System.Windows.Forms.Label();
-            this.gBox_ProductParameters1.SuspendLayout();
-            this.gBox_ProductParameters2.SuspendLayout();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_FowardTour = new System.Windows.Forms.TextBox();
+            this.txt_BackTour = new System.Windows.Forms.TextBox();
+            this.txt_FowardSpeed = new System.Windows.Forms.TextBox();
+            this.txt_BackSpeed = new System.Windows.Forms.TextBox();
+            this.txt_YonBeklemeSuresi = new System.Windows.Forms.TextBox();
+            this.txt_KabloBirakmaSuresi = new System.Windows.Forms.TextBox();
+            this.txt_Quantity = new System.Windows.Forms.TextBox();
+            this.txt_CableDirection = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txt_CompletedCount = new System.Windows.Forms.TextBox();
+            this.txt_RemainCount = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cable)).BeginInit();
             this.SuspendLayout();
             // 
-            // label12
+            // ofdFile
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(231, 183);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 13);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Kablo Bırakma Süresi:";
+            this.ofdFile.FileName = "ofdFile";
             // 
-            // label11
+            // pictureBox_Cable
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(21, 250);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(96, 13);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Tur Arası Bekleme:";
+            this.pictureBox_Cable.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Cable.BackgroundImage")));
+            this.pictureBox_Cable.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Cable.Image")));
+            this.pictureBox_Cable.Location = new System.Drawing.Point(67, 13);
+            this.pictureBox_Cable.Name = "pictureBox_Cable";
+            this.pictureBox_Cable.Size = new System.Drawing.Size(638, 180);
+            this.pictureBox_Cable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox_Cable.TabIndex = 0;
+            this.pictureBox_Cable.TabStop = false;
+            this.pictureBox_Cable.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Cable_Paint);
             // 
-            // label10
+            // label1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(33, 226);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 13);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Geri Yavaşlama:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(44, 224);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "İleri Tur:";
             // 
-            // label9
+            // label2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(42, 181);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 13);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Geri Hızlanma:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(36, 204);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "İleri Yavaşlama:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(45, 156);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 13);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "İleri Hızlanma:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(70, 130);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Geri Hız:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(69, 81);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 13);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Geri Tur:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(73, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "İleri Hız:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(44, 286);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "İleri Hız:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(72, 57);
+            this.label3.Location = new System.Drawing.Point(40, 258);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "İleri Tur:";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Geri Tur:";
             // 
-            // label14
+            // label4
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(275, 59);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(66, 13);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "Hatve Boyu:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(42, 317);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Geri Hız:";
             // 
-            // label18
+            // label5
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(234, 132);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(107, 13);
-            this.label18.TabIndex = 30;
-            this.label18.Text = "Burulma Sonrası Boy:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(249, 224);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Yön Bekleme Süresi:";
             // 
-            // label17
+            // label7
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(225, 158);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(116, 13);
-            this.label17.TabIndex = 29;
-            this.label17.Text = "Burulma Sonrası Boy 2:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(244, 255);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Kablo Bırakma Süresi:";
             // 
-            // label16
+            // label8
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(267, 83);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(74, 13);
-            this.label16.TabIndex = 28;
-            this.label16.Text = "Sağ Açık Boy:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(289, 314);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Kablo Yönü:";
             // 
-            // label15
+            // label9
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(271, 107);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 13);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "Sol Açık Boy:";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(315, 283);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 13);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Miktar:";
             // 
-            // gBox_ProductParameters1
+            // txt_FowardTour
             // 
-            this.gBox_ProductParameters1.Controls.Add(this.lb_TurArasiBekleme);
-            this.gBox_ProductParameters1.Controls.Add(this.lb_BackDeceleration);
-            this.gBox_ProductParameters1.Controls.Add(this.lb_BackAcceleretion);
-            this.gBox_ProductParameters1.Controls.Add(this.lb_FowardDeceleration);
-            this.gBox_ProductParameters1.Controls.Add(this.lb_FowardAcceleration);
-            this.gBox_ProductParameters1.Controls.Add(this.lb_BackSpeed);
-            this.gBox_ProductParameters1.Controls.Add(this.lb_BackCircuit);
-            this.gBox_ProductParameters1.Controls.Add(this.lb_FowardSpeed);
-            this.gBox_ProductParameters1.Controls.Add(this.lb_ForwardCircuit);
-            this.gBox_ProductParameters1.Location = new System.Drawing.Point(123, 43);
-            this.gBox_ProductParameters1.Name = "gBox_ProductParameters1";
-            this.gBox_ProductParameters1.Size = new System.Drawing.Size(90, 235);
-            this.gBox_ProductParameters1.TabIndex = 46;
-            this.gBox_ProductParameters1.TabStop = false;
+            this.txt_FowardTour.Location = new System.Drawing.Point(95, 221);
+            this.txt_FowardTour.Name = "txt_FowardTour";
+            this.txt_FowardTour.ReadOnly = true;
+            this.txt_FowardTour.Size = new System.Drawing.Size(80, 20);
+            this.txt_FowardTour.TabIndex = 2;
             // 
-            // lb_TurArasiBekleme
+            // txt_BackTour
             // 
-            this.lb_TurArasiBekleme.AutoSize = true;
-            this.lb_TurArasiBekleme.Location = new System.Drawing.Point(6, 209);
-            this.lb_TurArasiBekleme.Name = "lb_TurArasiBekleme";
-            this.lb_TurArasiBekleme.Size = new System.Drawing.Size(10, 13);
-            this.lb_TurArasiBekleme.TabIndex = 40;
-            this.lb_TurArasiBekleme.Text = "-";
+            this.txt_BackTour.Location = new System.Drawing.Point(95, 255);
+            this.txt_BackTour.Name = "txt_BackTour";
+            this.txt_BackTour.ReadOnly = true;
+            this.txt_BackTour.Size = new System.Drawing.Size(80, 20);
+            this.txt_BackTour.TabIndex = 2;
             // 
-            // lb_BackDeceleration
+            // txt_FowardSpeed
             // 
-            this.lb_BackDeceleration.AutoSize = true;
-            this.lb_BackDeceleration.Location = new System.Drawing.Point(6, 185);
-            this.lb_BackDeceleration.Name = "lb_BackDeceleration";
-            this.lb_BackDeceleration.Size = new System.Drawing.Size(10, 13);
-            this.lb_BackDeceleration.TabIndex = 41;
-            this.lb_BackDeceleration.Text = "-";
+            this.txt_FowardSpeed.Location = new System.Drawing.Point(95, 283);
+            this.txt_FowardSpeed.Name = "txt_FowardSpeed";
+            this.txt_FowardSpeed.ReadOnly = true;
+            this.txt_FowardSpeed.Size = new System.Drawing.Size(80, 20);
+            this.txt_FowardSpeed.TabIndex = 2;
             // 
-            // lb_BackAcceleretion
+            // txt_BackSpeed
             // 
-            this.lb_BackAcceleretion.AutoSize = true;
-            this.lb_BackAcceleretion.Location = new System.Drawing.Point(6, 140);
-            this.lb_BackAcceleretion.Name = "lb_BackAcceleretion";
-            this.lb_BackAcceleretion.Size = new System.Drawing.Size(10, 13);
-            this.lb_BackAcceleretion.TabIndex = 42;
-            this.lb_BackAcceleretion.Text = "-";
+            this.txt_BackSpeed.Location = new System.Drawing.Point(95, 314);
+            this.txt_BackSpeed.Name = "txt_BackSpeed";
+            this.txt_BackSpeed.ReadOnly = true;
+            this.txt_BackSpeed.Size = new System.Drawing.Size(80, 20);
+            this.txt_BackSpeed.TabIndex = 2;
             // 
-            // lb_FowardDeceleration
+            // txt_YonBeklemeSuresi
             // 
-            this.lb_FowardDeceleration.AutoSize = true;
-            this.lb_FowardDeceleration.Location = new System.Drawing.Point(6, 163);
-            this.lb_FowardDeceleration.Name = "lb_FowardDeceleration";
-            this.lb_FowardDeceleration.Size = new System.Drawing.Size(10, 13);
-            this.lb_FowardDeceleration.TabIndex = 43;
-            this.lb_FowardDeceleration.Text = "-";
+            this.txt_YonBeklemeSuresi.Location = new System.Drawing.Point(360, 221);
+            this.txt_YonBeklemeSuresi.Name = "txt_YonBeklemeSuresi";
+            this.txt_YonBeklemeSuresi.ReadOnly = true;
+            this.txt_YonBeklemeSuresi.Size = new System.Drawing.Size(80, 20);
+            this.txt_YonBeklemeSuresi.TabIndex = 2;
             // 
-            // lb_FowardAcceleration
+            // txt_KabloBirakmaSuresi
             // 
-            this.lb_FowardAcceleration.AutoSize = true;
-            this.lb_FowardAcceleration.Location = new System.Drawing.Point(6, 115);
-            this.lb_FowardAcceleration.Name = "lb_FowardAcceleration";
-            this.lb_FowardAcceleration.Size = new System.Drawing.Size(10, 13);
-            this.lb_FowardAcceleration.TabIndex = 44;
-            this.lb_FowardAcceleration.Text = "-";
+            this.txt_KabloBirakmaSuresi.Location = new System.Drawing.Point(360, 251);
+            this.txt_KabloBirakmaSuresi.Name = "txt_KabloBirakmaSuresi";
+            this.txt_KabloBirakmaSuresi.ReadOnly = true;
+            this.txt_KabloBirakmaSuresi.Size = new System.Drawing.Size(80, 20);
+            this.txt_KabloBirakmaSuresi.TabIndex = 2;
             // 
-            // lb_BackSpeed
+            // txt_Quantity
             // 
-            this.lb_BackSpeed.AutoSize = true;
-            this.lb_BackSpeed.Location = new System.Drawing.Point(6, 89);
-            this.lb_BackSpeed.Name = "lb_BackSpeed";
-            this.lb_BackSpeed.Size = new System.Drawing.Size(10, 13);
-            this.lb_BackSpeed.TabIndex = 45;
-            this.lb_BackSpeed.Text = "-";
+            this.txt_Quantity.Location = new System.Drawing.Point(360, 279);
+            this.txt_Quantity.Name = "txt_Quantity";
+            this.txt_Quantity.ReadOnly = true;
+            this.txt_Quantity.Size = new System.Drawing.Size(80, 20);
+            this.txt_Quantity.TabIndex = 2;
             // 
-            // lb_BackCircuit
+            // txt_CableDirection
             // 
-            this.lb_BackCircuit.AutoSize = true;
-            this.lb_BackCircuit.Location = new System.Drawing.Point(6, 40);
-            this.lb_BackCircuit.Name = "lb_BackCircuit";
-            this.lb_BackCircuit.Size = new System.Drawing.Size(10, 13);
-            this.lb_BackCircuit.TabIndex = 46;
-            this.lb_BackCircuit.Text = "-";
+            this.txt_CableDirection.Location = new System.Drawing.Point(360, 310);
+            this.txt_CableDirection.Name = "txt_CableDirection";
+            this.txt_CableDirection.ReadOnly = true;
+            this.txt_CableDirection.Size = new System.Drawing.Size(80, 20);
+            this.txt_CableDirection.TabIndex = 2;
             // 
-            // lb_FowardSpeed
+            // label11
             // 
-            this.lb_FowardSpeed.AutoSize = true;
-            this.lb_FowardSpeed.Location = new System.Drawing.Point(6, 64);
-            this.lb_FowardSpeed.Name = "lb_FowardSpeed";
-            this.lb_FowardSpeed.Size = new System.Drawing.Size(10, 13);
-            this.lb_FowardSpeed.TabIndex = 47;
-            this.lb_FowardSpeed.Text = "-";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(767, 228);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(0, 13);
+            this.label11.TabIndex = 1;
             // 
-            // lb_ForwardCircuit
+            // txt_CompletedCount
             // 
-            this.lb_ForwardCircuit.AutoSize = true;
-            this.lb_ForwardCircuit.Location = new System.Drawing.Point(6, 16);
-            this.lb_ForwardCircuit.Name = "lb_ForwardCircuit";
-            this.lb_ForwardCircuit.Size = new System.Drawing.Size(10, 13);
-            this.lb_ForwardCircuit.TabIndex = 48;
-            this.lb_ForwardCircuit.Text = "-";
+            this.txt_CompletedCount.Location = new System.Drawing.Point(588, 248);
+            this.txt_CompletedCount.Name = "txt_CompletedCount";
+            this.txt_CompletedCount.ReadOnly = true;
+            this.txt_CompletedCount.Size = new System.Drawing.Size(80, 20);
+            this.txt_CompletedCount.TabIndex = 9;
             // 
-            // gBox_ProductParameters2
+            // txt_RemainCount
             // 
-            this.gBox_ProductParameters2.Controls.Add(this.lb_KabloBirakmaSuresi);
-            this.gBox_ProductParameters2.Controls.Add(this.lb_BurulmaSonrasiBoy2);
-            this.gBox_ProductParameters2.Controls.Add(this.lb_BurulmaSonrasiBoy);
-            this.gBox_ProductParameters2.Controls.Add(this.lb_SagAcikBoy);
-            this.gBox_ProductParameters2.Controls.Add(this.lb_SolAcikBoy);
-            this.gBox_ProductParameters2.Controls.Add(this.lb_PitchDimension);
-            this.gBox_ProductParameters2.Location = new System.Drawing.Point(347, 44);
-            this.gBox_ProductParameters2.Name = "gBox_ProductParameters2";
-            this.gBox_ProductParameters2.Size = new System.Drawing.Size(93, 172);
-            this.gBox_ProductParameters2.TabIndex = 47;
-            this.gBox_ProductParameters2.TabStop = false;
+            this.txt_RemainCount.Location = new System.Drawing.Point(588, 218);
+            this.txt_RemainCount.Name = "txt_RemainCount";
+            this.txt_RemainCount.ReadOnly = true;
+            this.txt_RemainCount.Size = new System.Drawing.Size(80, 20);
+            this.txt_RemainCount.TabIndex = 10;
             // 
-            // lb_KabloBirakmaSuresi
+            // label12
             // 
-            this.lb_KabloBirakmaSuresi.AutoSize = true;
-            this.lb_KabloBirakmaSuresi.Location = new System.Drawing.Point(6, 139);
-            this.lb_KabloBirakmaSuresi.Name = "lb_KabloBirakmaSuresi";
-            this.lb_KabloBirakmaSuresi.Size = new System.Drawing.Size(10, 13);
-            this.lb_KabloBirakmaSuresi.TabIndex = 46;
-            this.lb_KabloBirakmaSuresi.Text = "-";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(511, 251);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 13);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Tamamlanan:";
             // 
-            // lb_BurulmaSonrasiBoy2
+            // label13
             // 
-            this.lb_BurulmaSonrasiBoy2.AutoSize = true;
-            this.lb_BurulmaSonrasiBoy2.Location = new System.Drawing.Point(6, 114);
-            this.lb_BurulmaSonrasiBoy2.Name = "lb_BurulmaSonrasiBoy2";
-            this.lb_BurulmaSonrasiBoy2.Size = new System.Drawing.Size(10, 13);
-            this.lb_BurulmaSonrasiBoy2.TabIndex = 47;
-            this.lb_BurulmaSonrasiBoy2.Text = "-";
-            // 
-            // lb_BurulmaSonrasiBoy
-            // 
-            this.lb_BurulmaSonrasiBoy.AutoSize = true;
-            this.lb_BurulmaSonrasiBoy.Location = new System.Drawing.Point(6, 88);
-            this.lb_BurulmaSonrasiBoy.Name = "lb_BurulmaSonrasiBoy";
-            this.lb_BurulmaSonrasiBoy.Size = new System.Drawing.Size(10, 13);
-            this.lb_BurulmaSonrasiBoy.TabIndex = 48;
-            this.lb_BurulmaSonrasiBoy.Text = "-";
-            // 
-            // lb_SagAcikBoy
-            // 
-            this.lb_SagAcikBoy.AutoSize = true;
-            this.lb_SagAcikBoy.Location = new System.Drawing.Point(6, 39);
-            this.lb_SagAcikBoy.Name = "lb_SagAcikBoy";
-            this.lb_SagAcikBoy.Size = new System.Drawing.Size(10, 13);
-            this.lb_SagAcikBoy.TabIndex = 49;
-            this.lb_SagAcikBoy.Text = "-";
-            // 
-            // lb_SolAcikBoy
-            // 
-            this.lb_SolAcikBoy.AutoSize = true;
-            this.lb_SolAcikBoy.Location = new System.Drawing.Point(6, 63);
-            this.lb_SolAcikBoy.Name = "lb_SolAcikBoy";
-            this.lb_SolAcikBoy.Size = new System.Drawing.Size(10, 13);
-            this.lb_SolAcikBoy.TabIndex = 50;
-            this.lb_SolAcikBoy.Text = "-";
-            // 
-            // lb_PitchDimension
-            // 
-            this.lb_PitchDimension.AutoSize = true;
-            this.lb_PitchDimension.Location = new System.Drawing.Point(6, 15);
-            this.lb_PitchDimension.Name = "lb_PitchDimension";
-            this.lb_PitchDimension.Size = new System.Drawing.Size(10, 13);
-            this.lb_PitchDimension.TabIndex = 51;
-            this.lb_PitchDimension.Text = "-";
-            // 
-            // lb_ProductName
-            // 
-            this.lb_ProductName.AutoSize = true;
-            this.lb_ProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lb_ProductName.Location = new System.Drawing.Point(139, 9);
-            this.lb_ProductName.Name = "lb_ProductName";
-            this.lb_ProductName.Size = new System.Drawing.Size(208, 17);
-            this.lb_ProductName.TabIndex = 25;
-            this.lb_ProductName.Text = "X Ürününün diğer parametreleri";
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(543, 221);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 13);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Kalan:";
             // 
             // ProductDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(501, 302);
-            this.Controls.Add(this.gBox_ProductParameters2);
-            this.Controls.Add(this.gBox_ProductParameters1);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label18);
+            this.ClientSize = new System.Drawing.Size(855, 514);
+            this.Controls.Add(this.txt_CompletedCount);
+            this.Controls.Add(this.txt_RemainCount);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txt_BackSpeed);
+            this.Controls.Add(this.txt_FowardSpeed);
+            this.Controls.Add(this.txt_BackTour);
+            this.Controls.Add(this.txt_CableDirection);
+            this.Controls.Add(this.txt_Quantity);
+            this.Controls.Add(this.txt_KabloBirakmaSuresi);
+            this.Controls.Add(this.txt_YonBeklemeSuresi);
+            this.Controls.Add(this.txt_FowardTour);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.lb_ProductName);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox_Cable);
             this.Name = "ProductDetailsForm";
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.ProductDetailsForm_Load);
-            this.gBox_ProductParameters1.ResumeLayout(false);
-            this.gBox_ProductParameters1.PerformLayout();
-            this.gBox_ProductParameters2.ResumeLayout(false);
-            this.gBox_ProductParameters2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.OpenFileDialog ofdFile;
+        private System.Windows.Forms.PictureBox pictureBox_Cable;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.GroupBox gBox_ProductParameters1;
-        private System.Windows.Forms.Label lb_TurArasiBekleme;
-        private System.Windows.Forms.Label lb_BackDeceleration;
-        private System.Windows.Forms.Label lb_BackAcceleretion;
-        private System.Windows.Forms.Label lb_FowardDeceleration;
-        private System.Windows.Forms.Label lb_FowardAcceleration;
-        private System.Windows.Forms.Label lb_BackSpeed;
-        private System.Windows.Forms.Label lb_BackCircuit;
-        private System.Windows.Forms.Label lb_FowardSpeed;
-        private System.Windows.Forms.Label lb_ForwardCircuit;
-        private System.Windows.Forms.GroupBox gBox_ProductParameters2;
-        private System.Windows.Forms.Label lb_KabloBirakmaSuresi;
-        private System.Windows.Forms.Label lb_BurulmaSonrasiBoy2;
-        private System.Windows.Forms.Label lb_BurulmaSonrasiBoy;
-        private System.Windows.Forms.Label lb_SagAcikBoy;
-        private System.Windows.Forms.Label lb_SolAcikBoy;
-        private System.Windows.Forms.Label lb_PitchDimension;
-        private System.Windows.Forms.Label lb_ProductName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_FowardTour;
+        private System.Windows.Forms.TextBox txt_BackTour;
+        private System.Windows.Forms.TextBox txt_FowardSpeed;
+        private System.Windows.Forms.TextBox txt_BackSpeed;
+        private System.Windows.Forms.TextBox txt_YonBeklemeSuresi;
+        private System.Windows.Forms.TextBox txt_KabloBirakmaSuresi;
+        private System.Windows.Forms.TextBox txt_Quantity;
+        private System.Windows.Forms.TextBox txt_CableDirection;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txt_CompletedCount;
+        private System.Windows.Forms.TextBox txt_RemainCount;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }

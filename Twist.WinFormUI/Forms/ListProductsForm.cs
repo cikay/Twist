@@ -26,29 +26,24 @@ namespace WindowsFormsApp1.Forms
         private void ListProductForm_Load(object sender, EventArgs e)
         {
             ListProducts();
+            string[] text =
+            {
+                "muzaffer", "Cikay", "gshdcbjx", "gvdhbjsxn",
+            };
+            ListViewItem lvi = new ListViewItem(text);
+
+            listView_Products.DoubleClick += ListView_Products_DoubleClick;
+
+            listView_Products.Items.Add(lvi);
             
            
         }
 
+      
+
         private void detailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Product productData = new Product();
-            if (listView_Products.SelectedItems.Count == 1)
-            {
-                foreach (KeyValuePair<int, Product> KeyValuePairProduct in dataCollection)
-                {
-                    productData = KeyValuePairProduct.Value;
-                    foreach (Parameters parameters in productData)
-                    {
-                        if (string.Compare(parameters.Value, listView_Products.SelectedItems[0].Text) == 0)
-                        {
-                            ProductDetailsForm detailsForm = new ProductDetailsForm(productData, parameters.Value);
-                            detailsForm.ShowDialog();
-                            break;
-                        }
-                    }
-                }
-            }
+          
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
@@ -88,11 +83,36 @@ namespace WindowsFormsApp1.Forms
                         };
                         var lvi = new ListViewItem(row);
                         listView_Products.Items.Add(lvi);
+                        listView_Products.MouseClick += ListView_Products_DoubleClick;
                     }
                 }
-                
             }
         }
+
+        private void ListView_Products_DoubleClick(object sender, EventArgs e)
+        {
+            Product productData = new Product();
+            
+            if (listView_Products.SelectedItems.Count == 1 && dataCollection != null)
+            {
+                foreach (KeyValuePair<int, Product> KeyValuePairProduct in dataCollection)
+                {
+
+                    foreach (Parameters parameters in productData)
+                    {
+                        if (string.Compare(parameters.Value, listView_Products.SelectedItems[0].Text) == 0)
+                        {
+                            productData = KeyValuePairProduct.Value;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            ProductDetailsForm detailsForm = new ProductDetailsForm(productData);
+            detailsForm.ShowDialog();
+        }
+
     }
 }
 

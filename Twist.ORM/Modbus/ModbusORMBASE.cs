@@ -31,7 +31,7 @@ namespace Twist.ORM
 
         public WriteOrReadDataType DataExchangeProtocol(ProtocolInfo protocolInfo)
         {
-            if (modbusClient.Connected) return WriteOrReadDataType.Non;
+            if (!modbusClient.Connected) return WriteOrReadDataType.Non;
             int[] Values = new int[100];
 
             modbusClient.WriteSingleRegister((int)RegisterAdress.AccessSystem, (int)AccessSystem.talep); //sistem erişim talebi
@@ -112,7 +112,7 @@ namespace Twist.ORM
 
         public bool SendData<T>(T data)
         {
-            if (modbusClient.Connected) return false;
+            if (!modbusClient.Connected) return false;
             PropertyInfo[] Properties = typeof(T).GetProperties();
             
             foreach (var prop in Properties)

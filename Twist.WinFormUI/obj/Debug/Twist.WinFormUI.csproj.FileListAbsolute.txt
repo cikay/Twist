@@ -21,7 +21,6 @@ E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.Forms.Ad
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.Forms.ListUsersForm.resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.Forms.ListCablesForm.resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.Forms.ListProductsForm.resources
-E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.ProductDetailsForm.resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources.English.Twist.AddCableForm.English.resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources.English.Twist.ListCablesForm.English.resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources.English.Twist.AddUserForm.English.resources
@@ -37,4 +36,4 @@ E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources.Turkish.Twist.AddUserForm.Turkish.resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Resources.Turkish.Twist.ListUsersForm.Turkish.resources
 E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\WindowsFormsApp1.Forms.AddUserForm.resources
-E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Forms.ProductDetailsForm2.resources
+E:\Yazılım projeleri\Twist\Twist.WinFormUI\obj\Debug\Twist.WinFormUI.Forms.ProductDetailsForm.resources
